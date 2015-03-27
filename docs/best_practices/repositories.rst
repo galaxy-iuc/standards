@@ -37,5 +37,6 @@ Tool often contain:
 * Tool XML files
 * ``macros.xml`` file for use in keeping tools DRY
 * ``test-data/`` directory, because all tools need test data
+* ``tool-data/`` directory, for things like ``*.loc`` files
 * ``tool_dependencies.xml`` file for specifying associated packages
 
