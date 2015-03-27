@@ -135,3 +135,38 @@ DataManagers
 ------------
 
 TODO
+
+Coding Style
+------------
+
+* 4 spaces indent
+* order of XML elemets:
+
+  * description
+  * macros
+  * requirements
+  * [code]
+  * stdio
+  * version_command
+  * command
+  * inputs
+  * outputs
+  * tests
+  * help
+  * citations 
+
+* cheetah code should be mainly PEP8 conform
+* large XML tags should be broken into several lines
+
+  * label and help can be on a new line 
+
+* variable names should be readable and understandable, preferable the long parameter name
+* Order of parameter attributes
+
+  *  name
+  *  type
+  *  [size]
+  *  value | truevalue | falsevalue
+  *  [checked]
+  *  label
+  *  help 
