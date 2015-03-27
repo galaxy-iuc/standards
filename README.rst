@@ -9,5 +9,5 @@ for contributing back to
 their own tool repositories.
 
 .. image:: https://readthedocs.org/projects/galaxy-iuc-standards/badge/?version=latest
-    :target: https://readthedocs.org/projects/galaxy-iuc-standards/?badge=latest
+    :target: http://galaxy-iuc-standards.readthedocs.org/en/latest/
     :alt: Documentation Status
