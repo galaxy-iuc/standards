@@ -1,0 +1,128 @@
+Tools
+=====
+
+Before you start writing a new tool please search the `Main Tool Shed
+(MTS) <https://toolshed.g2.bx.psu.edu>`__ and the `Test Tool Shed
+(TTS) <https://testtoolshed.g2.bx.psu.edu>`__ because it's possible that
+someone has already created a wrapper for the same third party
+executable you are looking for. Consider announcing your tool project on
+galaxy-dev to see if anyone has already created a wrapper.
+
+Tool versions
+-------------
+
+Tool versions are mandatory to enable reproducibility. Version is an
+attribute of the XML tool element, e.g. Toggle line numbers
+
+1
+
+and have to be incremented with each change of the wrapper (except for
+cosmetic modifications).
+
+Tool ids
+--------
+
+Should be meaningful and unique also in a larger context. If your tool
+is called ‘grep’ try to prefix that name with something meaningful.
+Objective is to make it easier for Galaxy admins to identify a tool
+based on the short ID. Otherwise they would need to use the long
+toolshed/xx/ id.
+
+Parameter help
+--------------
+
+The help section should include the long argument name (but this should
+not be in the tool label). E.g. help=”(--max)”. This is useful to give
+the user the chance to go to the original documentation and map the
+Galaxy UI element to the actual parameter. It also makes debugging
+easier if the user is talking to non-Galaxy developers.
+
+Tests
+-----
+
+All Galaxy Tools should include functional tests. In their simplest
+form, you provide sample input files and expected output files for given
+parameter values. Where the output file is not entirely reproducible you
+can make assertions about the output file contents.
+
+Testing error conditions is also important. Recent development now
+allows tests say if the test should fail, and to make assertions about
+the tool's stdout and stderr text (e.g. check expected summary text or
+warning messages appear).
+
+Booleans
+--------
+
+truevalue and falsevalue should have the actual parameter included. This
+makes it really easy to reference the param-name in the cheetah command
+section.
+
+Toggle line numbers
+
+1 2 $strict
+
+Boolean should not be used as conditionals. For conditionals please use
+a select type as described in Dynamic Options below.
+
+Dynamic Options
+---------------
+
+Certain options such as “Advanced Options” should be a select box and
+not a boolean. A checkbox is not expected to change the content of the
+mask from a user point of view.
+
+Command tag
+-----------
+
+The command tag should be started and finished by a CDATA tag, allowing
+direct use of characters like the ampersand (“&”) without needing XML
+escaping (“&”). Toggle line numbers
+
+1 <[CDATA[ your lines of cheetah here ]]>
+
+(http://en.wikipedia.org/wiki/CDATA)
+
+Help tag
+--------
+
+The help tag should be started and finished by a CDATA tag. Toggle line
+numbers
+
+1 <[CDATA[ your lines of restructuredText here ]]>
+
+(http://en.wikipedia.org/wiki/CDATA)
+
+Tool Dependency Package
+-----------------------
+
+If you are using perl/ruby/python/R packages, use the corresponding
+``*_environment`` tags to depend on a specific version of Perl/Ruby ...
+
+Generating Indices
+------------------
+
+Occasionally data needs to be indexed (e.g. bam, fasta) files. When data
+is indexed, those indices should be generated in the current working
+directory rather than alongside the input dataset. This is part of the
+tool contract, you can read from your inputs, but only write to your
+outputs and CWD.
+
+It's convenient to do something like:
+
+Toggle line numbers
+
+1 ln -sfn $input\_fasta tmp.fa;
+
+before data processing in order to be able to easily generate the
+indices without attempting to write to a (possibly) read-only data
+source.
+
+Datatypes
+---------
+
+TODO
+
+DataManagers
+------------
+
+TODO
