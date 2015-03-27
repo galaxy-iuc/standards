@@ -12,7 +12,7 @@ repositories in a structure similar to the following:
     ├── LICENSE
     ├── packages/
     │   └── package_NAME_VERSION/tool_dependencies.xml
-    ├── README.md
+    ├── README.rst
     └── tools/
         └── NAME
             ├── macros.xml
