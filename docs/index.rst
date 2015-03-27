@@ -8,7 +8,7 @@ practices that we would recommend to the community for their use.
 Contents:
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 3
 
    best_practices
 

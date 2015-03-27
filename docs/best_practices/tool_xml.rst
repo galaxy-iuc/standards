@@ -12,9 +12,11 @@ Tool versions
 -------------
 
 Tool versions are mandatory to enable reproducibility. Version is an
-attribute of the XML tool element, e.g. Toggle line numbers
+attribute of the XML tool element, e.g.
 
-1
+.. code:: xml
+
+    <tool id="rgTF" name="Tool Factory" version="1.11">
 
 and have to be incremented with each change of the wrapper (except for
 cosmetic modifications).
@@ -23,16 +25,16 @@ Tool ids
 --------
 
 Should be meaningful and unique also in a larger context. If your tool
-is called ‘grep’ try to prefix that name with something meaningful.
+is called ``grep`` try to prefix that name with something meaningful.
 Objective is to make it easier for Galaxy admins to identify a tool
 based on the short ID. Otherwise they would need to use the long
-toolshed/xx/ id.
+``toolshed/xx/`` id.
 
 Parameter help
 --------------
 
 The help section should include the long argument name (but this should
-not be in the tool label). E.g. help=”(--max)”. This is useful to give
+not be in the tool label). E.g. ``help="(--max)"``. This is useful to give
 the user the chance to go to the original documentation and map the
 Galaxy UI element to the actual parameter. It also makes debugging
 easier if the user is talking to non-Galaxy developers.
@@ -57,9 +59,10 @@ truevalue and falsevalue should have the actual parameter included. This
 makes it really easy to reference the param-name in the cheetah command
 section.
 
-Toggle line numbers
+.. code:: xml
 
-1 2 $strict
+    <param name=”strict” truevalue=”--enable-strict” falsevalue=””>
+    $strict
 
 Boolean should not be used as conditionals. For conditionals please use
 a select type as described in Dynamic Options below.
@@ -67,7 +70,7 @@ a select type as described in Dynamic Options below.
 Dynamic Options
 ---------------
 
-Certain options such as “Advanced Options” should be a select box and
+Certain options such as "Advanced Options" should be a select box and
 not a boolean. A checkbox is not expected to change the content of the
 mask from a user point of view.
 
@@ -75,12 +78,14 @@ Command tag
 -----------
 
 The command tag should be started and finished by a CDATA tag, allowing
-direct use of characters like the ampersand (“&”) without needing XML
-escaping (“&”). Toggle line numbers
+direct use of characters like the ampersand (``&``) without needing XML
+escaping (``&``). Toggle line numbers
 
-1 <[CDATA[ your lines of cheetah here ]]>
+.. code:: xml
 
-(http://en.wikipedia.org/wiki/CDATA)
+    <[CDATA[ your lines of cheetah here ]]>
+
+`Wikipedia has more on CDATA <http://en.wikipedia.org/wiki/CDATA>`__
 
 Help tag
 --------
@@ -88,9 +93,11 @@ Help tag
 The help tag should be started and finished by a CDATA tag. Toggle line
 numbers
 
-1 <[CDATA[ your lines of restructuredText here ]]>
+.. code:: xml
 
-(http://en.wikipedia.org/wiki/CDATA)
+    <[CDATA[ your lines of restructuredText here ]]>
+
+`http://en.wikipedia.org/wiki/CDATA <http://en.wikipedia.org/wiki/CDATA>`__
 
 Tool Dependency Package
 -----------------------
@@ -111,7 +118,9 @@ It's convenient to do something like:
 
 Toggle line numbers
 
-1 ln -sfn $input\_fasta tmp.fa;
+.. code:: console
+
+    ln -sfn $input\_fasta tmp.fa;
 
 before data processing in order to be able to easily generate the
 indices without attempting to write to a (possibly) read-only data

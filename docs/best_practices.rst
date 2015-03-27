@@ -50,10 +50,10 @@ Follows a short summary of the key parts when it comes to Galaxy Tools.
    maintenance by the local Galaxy administrators. Data Manager
    repositories should start with ``data_manager_``.
 
-Contents:
+Guides
+------
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     best_practices/tool_xml
-
