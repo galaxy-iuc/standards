@@ -18,8 +18,8 @@ attribute of the XML tool element, e.g.
 
     <tool id="rgTF" name="Tool Factory" version="1.11">
 
-and have to be incremented with each change of the wrapper (except for
-cosmetic modifications).
+and should be incremented with each change of the wrapper that is
+released to the Tool Shed (except for cosmetic modifications).
 
 Tool ids
 --------
