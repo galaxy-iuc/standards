@@ -9,9 +9,8 @@ Contents:
 
 .. toctree::
    :maxdepth: 2
-   :glob:
 
-    best_practices/*
+   best_practices
 
 Indices and tables
 ==================
