@@ -79,7 +79,7 @@ Command tag
 
 The command tag should be started and finished by a CDATA tag, allowing
 direct use of characters like the ampersand (``&``) without needing XML
-escaping (``&``). Toggle line numbers
+escaping (``&``).
 
 .. code:: xml
 
@@ -90,8 +90,7 @@ escaping (``&``). Toggle line numbers
 Help tag
 --------
 
-The help tag should be started and finished by a CDATA tag. Toggle line
-numbers
+The help tag should be started and finished by a CDATA tag.
 
 .. code:: xml
 
@@ -115,8 +114,6 @@ tool contract, you can read from your inputs, but only write to your
 outputs and CWD.
 
 It's convenient to do something like:
-
-Toggle line numbers
 
 .. code:: console
 
