@@ -83,7 +83,7 @@ escaping (``&``).
 
 .. code:: xml
 
-    <[CDATA[ your lines of cheetah here ]]>
+    <![CDATA[ your lines of cheetah here ]]>
 
 `Wikipedia has more on CDATA <http://en.wikipedia.org/wiki/CDATA>`__
 
@@ -94,7 +94,7 @@ The help tag should be started and finished by a CDATA tag.
 
 .. code:: xml
 
-    <[CDATA[ your lines of restructuredText here ]]>
+    <![CDATA[ your lines of restructuredText here ]]>
 
 `http://en.wikipedia.org/wiki/CDATA <http://en.wikipedia.org/wiki/CDATA>`__
 
