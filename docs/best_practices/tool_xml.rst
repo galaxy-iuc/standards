@@ -139,19 +139,19 @@ Coding Style
 * 4 spaces indent
 * order of XML elemets:
 
-  * `description`__
-  * `macros`__
-  * `requirements`__
+  * `description`_
+  * `macros`_
+  * `requirements`_
   * [code]
-  * `stdio`__
-  * `version_command`__
-  * `command`__
-  * `configfiles`__
-  * `inputs`__
-  * `outputs`__
-  * `tests`__
-  * `help`__
-  * `citations`__
+  * `stdio`_
+  * `version_command`_
+  * `command`_
+  * `configfiles`_
+  * `inputs`_
+  * `outputs`_
+  * `tests`_
+  * `help`_
+  * `citations`_
 
 * cheetah code should be mainly PEP8 conform
 * large XML tags should be broken into several lines
