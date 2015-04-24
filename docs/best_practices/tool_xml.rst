@@ -79,23 +79,22 @@ Command tag
 
 The command tag should be started and finished by a CDATA tag, allowing
 direct use of characters like the ampersand (``&``) without needing XML
-escaping (``&``). Toggle line numbers
+escaping (``&``).
 
 .. code:: xml
 
-    <[CDATA[ your lines of cheetah here ]]>
+    <![CDATA[ your lines of cheetah here ]]>
 
 `Wikipedia has more on CDATA <http://en.wikipedia.org/wiki/CDATA>`__
 
 Help tag
 --------
 
-The help tag should be started and finished by a CDATA tag. Toggle line
-numbers
+The help tag should be started and finished by a CDATA tag.
 
 .. code:: xml
 
-    <[CDATA[ your lines of restructuredText here ]]>
+    <![CDATA[ your lines of restructuredText here ]]>
 
 `http://en.wikipedia.org/wiki/CDATA <http://en.wikipedia.org/wiki/CDATA>`__
 
@@ -115,8 +114,6 @@ tool contract, you can read from your inputs, but only write to your
 outputs and CWD.
 
 It's convenient to do something like:
-
-Toggle line numbers
 
 .. code:: console
 
