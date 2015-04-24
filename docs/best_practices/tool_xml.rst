@@ -142,19 +142,19 @@ Coding Style
 * 4 spaces indent
 * order of XML elemets:
 
-  * description
-  * macros
-  * requirements
+  * `description`__
+  * `macros`__
+  * `requirements`__
   * [code]
-  * stdio
-  * version_command
-  * command
-  * configfiles
-  * inputs
-  * outputs
-  * tests
-  * help
-  * citations
+  * `stdio`__
+  * `version_command`__
+  * `command`__
+  * `configfiles`__
+  * `inputs`__
+  * `outputs`__
+  * `tests`__
+  * `help`__
+  * `citations`__
 
 * cheetah code should be mainly PEP8 conform
 * large XML tags should be broken into several lines
@@ -171,3 +171,16 @@ Coding Style
   *  [checked]
   *  label
   *  help 
+
+.. _description: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Cdescription.3E_tag_set
+.. _macros: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#Macro_Token
+.. _requirements: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Crequirements.3E_tag_set
+.. _stdio: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Cstdio.3E.2C_.3Cregex.3E.2C_and_.3Cexit_code.3E_tag_sets
+.. _version_command: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Cversion_command.3E_tag_set
+.. _command: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Ccommand.3E_tag_set
+.. _configfiles: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Cconfigfiles.3E_tag_set
+.. _inputs: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Cinputs.3E_tag_set
+.. _outputs: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Coutputs.3E_tag_set
+.. _tests: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Ctests.3E_tag_set
+.. _help: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Chelp.3E_tag_set
+.. _citations: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Ccitations.3E_tag_set
