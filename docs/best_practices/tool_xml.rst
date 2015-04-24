@@ -149,11 +149,12 @@ Coding Style
   * stdio
   * version_command
   * command
+  * configfiles
   * inputs
   * outputs
   * tests
   * help
-  * citations 
+  * citations
 
 * cheetah code should be mainly PEP8 conform
 * large XML tags should be broken into several lines
