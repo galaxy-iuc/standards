@@ -141,6 +141,7 @@ Coding Style
 
   * `description`_
   * `macros`_
+  * [parallelism]
   * `requirements`_
   * [code]
   * `stdio`_
