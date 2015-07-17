@@ -117,7 +117,7 @@ It's convenient to do something like:
 
 .. code:: console
 
-    ln -sfn "${input}"\_fasta tmp.fa;
+    ln -sfn $input\_fasta tmp.fa;
 
 before data processing in order to be able to easily generate the
 indices without attempting to write to a (possibly) read-only data
@@ -159,7 +159,6 @@ Coding Style
   * label and help can be on a new line 
 
 * variable names should be readable and understandable, preferable the long parameter name
-* variables should be quoted with "${var_name}", especially all text-params and input files
 * Order of parameter attributes
 
   *  name
