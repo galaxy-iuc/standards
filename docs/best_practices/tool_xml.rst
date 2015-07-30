@@ -117,7 +117,7 @@ It's convenient to do something like:
 
 .. code:: console
 
-    ln -sfn "${input}"\_fasta tmp.fa;
+    ln -sfn "${input_fasta}" tmp.fa;
 
 before data processing in order to be able to easily generate the
 indices without attempting to write to a (possibly) read-only data
