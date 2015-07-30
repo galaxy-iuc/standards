@@ -57,6 +57,14 @@ Tools
 
     best_practices/tool_xml
 
+Packages
+--------
+
+.. toctree::
+
+    best_practices/package_xml
+
+
 Repository Layout
 -----------------
 
