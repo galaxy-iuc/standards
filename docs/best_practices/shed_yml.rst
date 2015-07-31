@@ -100,3 +100,34 @@ it without `auto_tool_repositories <https://github.com/galaxyproject/planemo/blo
 as a generic replacement for repository_dependencies.xml and adding `additional dependent
 repositories <https://github.com/galaxyproejct/planemo/blob/master/tests/data/repos/multi_repos_flat_flag_suite/.shed.yml>`__
 in addition to the ones defined by the .shed.yml file.
+
+
+Shed Upload Includes/Excludes
+-----------------------------
+
+Sometimes it is of interest to have shared data in a single directory, and then to ``include`` that
+when needed. A good example of this are the `blast <https://github.com/peterjc/galaxy_blast/blob/master/tools/ncbi_blast_plus/.shed.yml>`__
+wrappers which take advantage of the feature in order to share test data amongst a number of
+directories which all need the data.
+
+.. code:: yaml
+
+    include:
+    - strip_components: 2
+      source:
+      - ../../test-data/blastdb.loc
+      - ../../test-data/blastdb_d.loc
+      - ../../test-data/blastdb_p.loc
+      - ../../test-data/blastn_arabidopsis.extended.tabular
+
+This snippet informs planemo that it should include specific datasets from ``../../test-data`` and
+that as part of the include process it should strip the first two path components.
+
+The ``ignore`` or ``exclude`` functionality works similarly, just specify a list of paths you wish
+to exclude:
+
+.. code:: yaml
+
+    exclude:
+      - test-data/my-gigantic-test-dataset.fastq
+
