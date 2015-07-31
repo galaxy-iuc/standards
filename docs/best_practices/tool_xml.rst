@@ -52,6 +52,21 @@ would have a hard time finding it and gathering context about its functionality.
 With the VSearch prefix, once a user learns what one VSearch tool does, they can
 quickly apply that to the other available VSearch tools.
 
+Tool Descriptions
+-----------------
+
+Tool names are not your only tool for making your tool discoverable to end
+users, and conveying information regarding the functionality of said tool. Tool
+descriptions are displayed directly after the tool name and generally conform to
+a "sentence" like structure.
+
+-  ``bowtie2`` is a short read aligner
+-  ``Cuffmerge`` merges together several Cufflinks assemblies
+-  ``NCBI BLAST+ database info`` shows BLAST database information from blastdbcmd
+
+In the above examples the tool name is rendered in fixed width text, and the
+rest is the tool description.
+
 Parameter help
 --------------
 
