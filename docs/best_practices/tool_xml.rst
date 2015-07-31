@@ -30,7 +30,12 @@ Objective is to make it easier for Galaxy admins to identify a tool
 based on the short ID. Otherwise they would need to use the long
 ``toolshed/xx/`` id.
 
-Tool IDs should contain only ``[A-Za-z0-9._-]``
+Some simple rules for generating tool IDs:
+
+-  Tool IDs should contain only ``[a-z0-9._-]``. 
+-  Multiple words should be separated by underscore or dashes
+-  Suite tools should prefix their ids with the suite name. E.g. ``bedtools_*``
+
 
 Tool Names
 ----------
