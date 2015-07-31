@@ -30,6 +30,28 @@ Objective is to make it easier for Galaxy admins to identify a tool
 based on the short ID. Otherwise they would need to use the long
 ``toolshed/xx/`` id.
 
+Tool IDs should contain only ``[A-Za-z0-9._-]``
+
+Tool Names
+----------
+
+Names are important! Names are how users and admins find your tools. Names
+should strive to be unique within a suite of tools, and may wish to include the
+suite name if it is a well known suite. Some instructional examples:
+
+-  Cufflinks, Cuffdiff, Cuffmerge are in a suite together.
+-  The vsearch suite contains tools with names like "VSearch Alignment",
+   "VSearch Clustering", etc.
+
+In the cufflinks example, everyone knows the functionality of the cufflinks
+command, and can easily guess as the use of a tool named "cuffdiff" in their
+tool panel.
+
+With VSearch however, a tool named "Alignment" would not be useful, as users
+would have a hard time finding it and gathering context about its functionality.
+With the VSearch prefix, once a user learns what one VSearch tool does, they can
+quickly apply that to the other available VSearch tools.
+
 Parameter help
 --------------
 
