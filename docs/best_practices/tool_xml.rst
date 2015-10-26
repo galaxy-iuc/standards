@@ -119,6 +119,12 @@ mask from a user point of view.
 Command tag
 -----------
 
+The command tag is one of the most important parts of the tool, next to the
+user-facing options. It's important that it be highly legible.
+
+Command Formatting
+^^^^^^^^^^^^^^^^^^
+
 The command tag should be started and finished by a CDATA tag, allowing
 direct use of characters like the ampersand (``&``) without needing XML
 escaping (``&``).
@@ -128,6 +134,24 @@ escaping (``&``).
     <![CDATA[ your lines of cheetah here ]]>
 
 `Wikipedia has more on CDATA <http://en.wikipedia.org/wiki/CDATA>`__
+
+Exit Code Detection
+^^^^^^^^^^^^^^^^^^^
+
+Unless the tool has special requirements, you should take advantage of the exit
+code detection provided by Galaxy, in lieu of using the ``<stdio/>`` tags. This
+can be done by adding a ``detect_errors`` tag to your ``<command />`` block like
+so:
+
+.. code:: xml
+
+    <command detect_errors="aggressive">
+    ...
+    </command>
+
+This will automatically fail the tool if the exit code is non-zero, or if the
+phrases ``error:`` or ``exception:`` appear in STDERR.
+
 
 Help tag
 --------
