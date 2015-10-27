@@ -30,6 +30,48 @@ Objective is to make it easier for Galaxy admins to identify a tool
 based on the short ID. Otherwise they would need to use the long
 ``toolshed/xx/`` id.
 
+Some simple rules for generating tool IDs:
+
+-  Tool IDs should contain only ``[a-z0-9_-]``. 
+-  Multiple words should be separated by underscore or dashes
+-  Suite tools should prefix their ids with the suite name. E.g. ``bedtools_*``
+
+
+Tool Names
+----------
+
+Names are important! Names are how users and admins find your tools. Names
+should strive to be unique within a suite of tools, and may wish to include the
+suite name if it is a well known suite. Some instructional examples:
+
+-  Cufflinks, Cuffdiff, Cuffmerge are in a suite together.
+-  The vsearch suite contains tools with names like "VSearch Alignment",
+   "VSearch Clustering", etc.
+
+In the cufflinks example, everyone knows the functionality of the cufflinks
+command, and can easily guess as the use of a tool named "cuffdiff" in their
+tool panel.
+
+With VSearch however, a tool named "Alignment" would not be useful, as users
+would have a hard time finding it and gathering context about its functionality.
+With the VSearch prefix, once a user learns what one VSearch tool does, they can
+quickly apply that to the other available VSearch tools.
+
+Tool Descriptions
+-----------------
+
+Tool names are not your only tool for making your tool discoverable to end
+users, and conveying information regarding the functionality of said tool. Tool
+descriptions are displayed directly after the tool name and generally conform to
+a "sentence" like structure.
+
+-  ``bowtie2`` is a short read aligner
+-  ``Cuffmerge`` merges together several Cufflinks assemblies
+-  ``NCBI BLAST+ database info`` shows BLAST database information from blastdbcmd
+
+In the above examples the tool name is rendered in fixed width text, and the
+rest is the tool description.
+
 Parameter help
 --------------
 
@@ -77,6 +119,12 @@ mask from a user point of view.
 Command tag
 -----------
 
+The command tag is one of the most important parts of the tool, next to the
+user-facing options. It's important that it be highly legible.
+
+Command Formatting
+^^^^^^^^^^^^^^^^^^
+
 The command tag should be started and finished by a CDATA tag, allowing
 direct use of characters like the ampersand (``&``) without needing XML
 escaping (``&``).
@@ -86,6 +134,24 @@ escaping (``&``).
     <![CDATA[ your lines of cheetah here ]]>
 
 `Wikipedia has more on CDATA <http://en.wikipedia.org/wiki/CDATA>`__
+
+Exit Code Detection
+^^^^^^^^^^^^^^^^^^^
+
+Unless the tool has special requirements, you should take advantage of the exit
+code detection provided by Galaxy, in lieu of using the ``<stdio/>`` tags. This
+can be done by adding a ``detect_errors`` tag to your ``<command />`` block like
+so:
+
+.. code:: xml
+
+    <command detect_errors="aggressive">
+    ...
+    </command>
+
+This will automatically fail the tool if the exit code is non-zero, or if the
+phrases ``error:`` or ``exception:`` appear in STDERR.
+
 
 Help tag
 --------
@@ -117,7 +183,7 @@ It's convenient to do something like:
 
 .. code:: console
 
-    ln -sfn "${input}"\_fasta tmp.fa;
+    ln -sfn "${input_fasta}" tmp.fa;
 
 before data processing in order to be able to easily generate the
 indices without attempting to write to a (possibly) read-only data
