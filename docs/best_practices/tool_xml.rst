@@ -32,7 +32,7 @@ based on the short ID. Otherwise they would need to use the long
 
 Some simple rules for generating tool IDs:
 
--  Tool IDs should contain only ``[a-z0-9._-]``. 
+-  Tool IDs should contain only ``[a-z0-9_-]``. 
 -  Multiple words should be separated by underscore or dashes
 -  Suite tools should prefix their ids with the suite name. E.g. ``bedtools_*``
 
