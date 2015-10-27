@@ -123,7 +123,7 @@ directories which all need the data.
 This snippet informs planemo that it should include specific datasets from ``../../test-data`` and
 that as part of the include process it should strip the first two path components.
 
-The ``include`` or ``exclude`` functionality works similarly, just specify a list of paths you wish
+The ``exclude`` functionality works similarly, just specify a list of paths you wish
 to exclude:
 
 .. code:: yaml
