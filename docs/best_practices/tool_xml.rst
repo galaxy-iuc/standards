@@ -174,7 +174,7 @@ interested in.
 Including Images
 ^^^^^^^^^^^^^^^^
 
-If you've produced images detailing how your tool works (e.g. `bedtools`_), it
+If you have produced images detailing how your tool works (e.g. `bedtools`_), it
 might be nice for those images to be included in the Galaxy tool documentation!
 
 Images should be placed in a subdirectory, ``./static/images/``, and referenced
