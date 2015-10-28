@@ -98,7 +98,7 @@ Booleans
 --------
 
 truevalue and falsevalue should have the actual parameter included. This
-makes it really easy to reference the param-name in the cheetah command
+makes it really easy to reference the param name in the Cheetah command
 section.
 
 .. code:: xml
@@ -127,13 +127,17 @@ Command Formatting
 
 The command tag should be started and finished by a CDATA tag, allowing
 direct use of characters like the ampersand (``&``) without needing XML
-escaping (``&``).
+escaping (``&amp;``).
 
 .. code:: xml
 
-    <![CDATA[ your lines of cheetah here ]]>
+    <![CDATA[ your lines of Cheetah here ]]>
 
 `Wikipedia has more on CDATA <http://en.wikipedia.org/wiki/CDATA>`__
+
+If you need to execute more than one shell command, concatenate them with a
+double ampersand (``&&``), so that an error in a command will abort the
+execution of the following ones.
 
 Exit Code Detection
 ^^^^^^^^^^^^^^^^^^^
@@ -203,7 +207,7 @@ Coding Style
 ------------
 
 * 4 spaces indent
-* order of XML elemets:
+* Order of XML elements:
 
   * `description`_
   * `macros`_
@@ -219,18 +223,17 @@ Coding Style
   * `help`_
   * `citations`_
 
-* cheetah code should be mainly PEP8 conform
-* large XML tags should be broken into several lines
+* Cheetah code should be mainly PEP8 conform
+* Large XML tags should be broken into several lines
 
   * label and help can be on a new line 
 
-* variable names should be readable and understandable, preferable the long parameter name
-* variables should be quoted with "${var_name}", especially all text-params and input files
+* param names should be readable and understandable, e.g. using the long option name of the wrapped tool
+* All Cheetah variables for text params, input and output files must be quoted with "${var_name}"
 * Order of parameter attributes
 
   *  name
   *  type
-  *  [size]
   *  value | truevalue | falsevalue
   *  [checked]
   *  label
