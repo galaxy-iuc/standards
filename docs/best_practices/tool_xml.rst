@@ -178,7 +178,9 @@ If you've produced images detailing how your tool works (e.g. `bedtools`_), it
 might be nice for those images to be included in the Galaxy tool documentation!
 
 Images should be placed in a subdirectory, ``./static/images/``, and referenced
-in your tool help as ``.. image:: my-picture.png``.
+in your tool help as ``.. image:: my-picture.png``. This can be seen in the
+IUC's wrappers, such as the one for the bedtools `slop`_ command.
+
 
 Tool Dependency Package
 -----------------------
@@ -265,3 +267,4 @@ Coding Style
 .. _help: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Chelp.3E_tag_set
 .. _citations: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Ccitations.3E_tag_set
 .. _bedtools: http://bedtools.readthedocs.org/en/latest/content/tools/slop.html
+.. _slop: https://github.com/galaxyproject/tools-iuc/blob/master/tools/bedtools/slopBed.xml
