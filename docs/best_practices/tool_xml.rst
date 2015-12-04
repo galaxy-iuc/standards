@@ -168,6 +168,24 @@ The help tag should be started and finished by a CDATA tag.
 
 `http://en.wikipedia.org/wiki/CDATA <http://en.wikipedia.org/wiki/CDATA>`__
 
+Inside the help tag you should describe the functionality of your tool.
+The help tag is to the ``help=""`` attribute as a man page is to the ``--help``
+flag. The help tag should cover the tools functionality, use cases, and even
+known issues in detail. The help tag is a good place to provide examples of how
+to run the tool and discuss specific subcases that your users might be
+interested in.
+
+Including Images
+^^^^^^^^^^^^^^^^
+
+If you have produced images detailing how your tool works (e.g. `bedtools`_), it
+might be nice for those images to be included in the Galaxy tool documentation!
+
+Images should be placed in a subdirectory, ``./static/images/``, and referenced
+in your tool help as ``.. image:: my-picture.png``. This can be seen in the
+IUC's wrappers, such as the one for the bedtools `slop`_ command.
+
+
 Tool Dependency Package
 -----------------------
 
@@ -251,3 +269,5 @@ Coding Style
 .. _tests: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Ctests.3E_tag_set
 .. _help: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Chelp.3E_tag_set
 .. _citations: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Ccitations.3E_tag_set
+.. _bedtools: http://bedtools.readthedocs.org/en/latest/content/tools/slop.html
+.. _slop: https://github.com/galaxyproject/tools-iuc/blob/master/tools/bedtools/slopBed.xml
