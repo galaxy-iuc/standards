@@ -146,6 +146,7 @@ Coding Style
   * `stdio`_
   * `version_command`_
   * `command`_
+  * environment_variables
   * `configfiles`_
   * `inputs`_
   * `outputs`_
