@@ -214,7 +214,7 @@ source.
 Datatypes
 ---------
 
-See [ToolShed Datatypes Features Wiki](https://wiki.galaxyproject.org/ToolShedDatatypesFeatures)
+See `ToolShed Datatypes Features Wiki <https://wiki.galaxyproject.org/ToolShedDatatypesFeatures>`__
 TODO: More explanations with planemo
 
 DataManagers
