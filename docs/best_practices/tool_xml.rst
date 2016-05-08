@@ -214,9 +214,7 @@ source.
 Datatypes
 ---------
 
-See `ToolShed Datatypes Features Wiki <https://wiki.galaxyproject.org/ToolShedDatatypesFeatures>`__
-
-TODO: More explanations with planemo
+For now, the recommended practice is to push your datatype to [Galaxy](https://github.com/galaxyproject/galaxy) repository.
 
 DataManagers
 ------------
