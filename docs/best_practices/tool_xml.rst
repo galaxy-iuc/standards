@@ -214,7 +214,7 @@ source.
 Datatypes
 ---------
 
-TODO
+For now, the recommended practice is to push your datatype to [Galaxy](https://github.com/galaxyproject/galaxy) repository.
 
 DataManagers
 ------------
