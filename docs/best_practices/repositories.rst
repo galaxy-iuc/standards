@@ -19,6 +19,7 @@ repositories in a structure similar to the following:
         └── NAME
             ├── macros.xml
             ├── my_tool.xml
+            ├── CHANGELOG.md
             ├── other_tool.xml
             ├── test-data/
             └── tool_dependencies.xml
@@ -83,6 +84,7 @@ Tool often contain:
 * ``test-data/`` directory, because all tools need test data
 * ``tool-data/`` directory, for things like ``*.loc`` files
 * ``tool_dependencies.xml`` file for specifying associated packages
+* ``CHANGELOG.md`` file for tracking the history of features over time in your tool
 
 .. _README: http://en.wikipedia.org/wiki/README
 .. _reStructuredText: http://docutils.sourceforge.net/rst.html

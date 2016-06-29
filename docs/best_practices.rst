@@ -79,3 +79,10 @@ Repository Layout
 
     best_practices/shed_yml
 
+Repository Management
+---------------------
+
+.. toctree::
+
+    best_practices/management
+
