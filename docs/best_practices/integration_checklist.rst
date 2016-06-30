@@ -26,7 +26,7 @@ Creating the Tool Wrapper
 
     - Find an appropriate name and ID by consulting the IUC's Best Practices List.
 
-- Fill in your requierments section in the Tool file with the conda package's name and version number.
+- Fill in your requirements section in the Tool file with the conda package's name and version number.
 - Add test-data
 
     - Fill test-data directory with at least one input file and the expected
