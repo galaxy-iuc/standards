@@ -62,10 +62,11 @@ Adding Your Tool to the IUC Repository
 - Create an issue on IUC GitHub tracking your progress and ensuring that no one else is working on the same tool.
 - Fork IUC GitHub on your GitHub account
 - Clone of the corresponding repository ``git clone https://github.com/<YOUR_NAME>/tools-iuc tools-iuc``
-- Within that folder, create a corresponding branch. You might name it after the tool.
+- Within that folder, create a corresponding branch with ``git checkout -b
+  $branch_name``. You might name it after the tool.
 - After you have tested your tool and are completely happy with it (per
   previous sections of this document), add your tool and all associated data,
-  then Commit the changes with ``git commit``. Finally push your changes
+  then Commit the changes with ``git commit -m "I changed X, Y, and Z"``. Finally push your changes
   to github with ``git push``.
 - Go to the `IUC's Repository <https://github.com/galaxyproject/tools-iuc>`__ and click on 'Compare & Pull Request'
 - Add a comment describing what the tool and any extra information that might
