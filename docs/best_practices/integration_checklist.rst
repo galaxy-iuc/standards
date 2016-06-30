@@ -32,6 +32,9 @@ Creating the Tool Wrapper
     - Fill test-data directory with at least one input file and the expected
       output file. The primary output is a good choice for testing. Don't
       forget the use of ``sim_size`` if variable data is included.
+    - It is strongly encouraged that you use small test data sets, ideally
+      under 10 Mb. Every galaxy instance that downloads your tool will
+      have to download an entire copy of the test data.
 
 - Supply at least one tool test.
 - If your tool uses ``tool-data``:
@@ -60,7 +63,8 @@ Adding Your Tool to the IUC Repository
 - Within that folder, create a corresponding branch. You might name it after the tool.
 - After you have tested your tool and are completely happy with it (per
   previous sections of this document), add your tool and all associated data,
-  then Commit the changes with ``git commit``
+  then Commit the changes with ``git commit``. Finally push your changes
+  to github with ``git push``.
 - Go to the `IUC's Repository <https://github.com/galaxyproject/tools-iuc>`__ and click on 'Compare & Pull Request'
 - Add a comment describing what the tool and any extra information that might
   be needed (E.g. "I had some trouble with the data tables, can someone please
