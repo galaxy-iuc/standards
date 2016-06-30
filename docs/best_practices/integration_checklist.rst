@@ -16,7 +16,7 @@ Before ToolShed
   are wrapping. If they do not exist, you may need to create them. The IUC will
   be happy to help you with doing this.
 - Planemo should be installed (``pip install -U planemo``)
-- You will need to have credentials to access your ToolShed (Either the `Main
+- You will need to have credentials to access your ToolShed (either the `Main
   ToolShed <https://toolshed.g2.bx.psu.edu/>`__, or your local Galactic ToolShed)
 
 Creating the Tool Wrapper
