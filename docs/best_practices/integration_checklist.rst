@@ -33,8 +33,10 @@ Creating the Tool Wrapper
       output file. The primary output is a good choice for testing. Don't
       forget the use of ``sim_size`` if variable data is included.
     - It is strongly encouraged that you use small test data sets, ideally
-      under 10 Mb. Every galaxy instance that downloads your tool will
-      have to download an entire copy of the test data.
+      under 1 Mb. Every galaxy instance that downloads your tool will
+      have to download an entire copy of the test data. If the sum of your
+      test-data files is larger than that, consider use of the ``contains``
+      test.
 
 - Supply at least one tool test.
 - If your tool uses ``tool-data``:
