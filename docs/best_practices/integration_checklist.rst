@@ -67,7 +67,7 @@ Adding Your Tool to the IUC Repository
 - After you have tested your tool and are completely happy with it (per
   previous sections of this document), add your tool and all associated data,
   then Commit the changes with ``git commit -m "I changed X, Y, and Z"``. Finally push your changes
-  to github with ``git push``.
+  to github with ``git push origin $branch_name``.
 - Go to the `IUC's Repository <https://github.com/galaxyproject/tools-iuc>`__ and click on 'Compare & Pull Request'
 - Add a comment describing what the tool and any extra information that might
   be needed (E.g. "I had some trouble with the data tables, can someone please
