@@ -106,15 +106,16 @@ section.
     <param name=”strict” truevalue=”--enable-strict” falsevalue=””>
     $strict
 
-Boolean should not be used as conditionals. For conditionals please use
-a select type as described in Dynamic Options below.
+Boolean should not be used as a conditional for other options. For dynamic
+options, please use a ``select`` input type as described in Dynamic Options
+below.
 
 Dynamic Options
 ---------------
 
-Certain options such as "Advanced Options" should be a select box and
-not a boolean. A checkbox is not expected to change the content of the
-mask from a user point of view.
+Options that are conditionally hidden (such as "Advanced Options") should use
+a ``select`` input type and not a boolean. The user should not expect a boolean
+to change the content of the form.
 
 Command tag
 -----------
