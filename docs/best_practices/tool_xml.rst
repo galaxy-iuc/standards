@@ -217,10 +217,11 @@ source.
 Datatypes
 ---------
 
-For now, the recommended practice is to push your datatype to [Galaxy](https://github.com/galaxyproject/galaxy) repository.
+For now, the recommended practice is to push new datatypes to the `Galaxy`_
+repository.
 
-DataManagers
-------------
+Data Managers
+-------------
 
 TODO
 
@@ -260,17 +261,18 @@ Coding Style
   *  label
   *  help 
 
-.. _description: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Cdescription.3E_tag_set
-.. _macros: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#Macro_Token
-.. _requirements: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Crequirements.3E_tag_set
-.. _stdio: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Cstdio.3E.2C_.3Cregex.3E.2C_and_.3Cexit_code.3E_tag_sets
-.. _version_command: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Cversion_command.3E_tag_set
-.. _command: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Ccommand.3E_tag_set
-.. _configfiles: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Cconfigfiles.3E_tag_set
-.. _inputs: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Cinputs.3E_tag_set
-.. _outputs: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Coutputs.3E_tag_set
-.. _tests: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Ctests.3E_tag_set
-.. _help: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Chelp.3E_tag_set
-.. _citations: https://wiki.galaxyproject.org/Admin/Tools/ToolConfigSyntax#A.3Ccitations.3E_tag_set
+.. _description: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|description
+.. _macros: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|macros
+.. _requirements: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|requirements
+.. _stdio: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|stdio
+.. _version_command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|version_command
+.. _command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|command
+.. _configfiles: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|configfiles
+.. _inputs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|inputs
+.. _outputs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|outputs
+.. _tests: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|tests
+.. _help: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|help
+.. _citations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|citations
 .. _bedtools: http://bedtools.readthedocs.org/en/latest/content/tools/slop.html
 .. _slop: https://github.com/galaxyproject/tools-iuc/blob/master/tools/bedtools/slopBed.xml
+.. _Galaxy: https://github.com/galaxyproject/galaxy
