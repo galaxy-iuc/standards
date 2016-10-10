@@ -120,7 +120,7 @@ Command tag
 -----------
 
 The command tag is one of the most important parts of the tool, next to the
-user-facing options. It's important that it be highly legible.
+user-facing options. It should be highly legible.
 
 Command Formatting
 ^^^^^^^^^^^^^^^^^^
@@ -134,6 +134,9 @@ escaping (``&amp;``).
     <![CDATA[ your lines of Cheetah here ]]>
 
 `Wikipedia has more on CDATA <http://en.wikipedia.org/wiki/CDATA>`__
+
+All Cheetah variables for text parameters, input and output files must be
+single-quoted, e.g. ``'${var_name}'``.
 
 If you need to execute more than one shell command, concatenate them with a
 double ampersand (``&&``), so that an error in a command will abort the
@@ -242,14 +245,13 @@ Coding Style
   * `help`_
   * `citations`_
 
-* Cheetah code should be mainly PEP8 conform
-* Large XML tags should be broken into several lines
+* Cheetah code should also be indented and mainly PEP8 conformant
+* Large XML elements may be broken into several lines
 
-  * label and help can be on a new line 
+  * label and help attributes can be on a new line
 
 * param names should be readable and understandable, e.g. using the long option name of the wrapped tool
-* All Cheetah variables for text params, input and output files must be quoted with "${var_name}"
-* Order of parameter attributes
+* Order of parameter attributes:
 
   *  name
   *  type
