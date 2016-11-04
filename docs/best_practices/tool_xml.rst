@@ -261,18 +261,18 @@ Coding Style
   *  label
   *  help 
 
-.. _description: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|description
-.. _macros: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|macros
-.. _requirements: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|requirements
-.. _stdio: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|stdio
-.. _version_command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|version_command
-.. _command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|command
-.. _configfiles: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|configfiles
-.. _inputs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|inputs
-.. _outputs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|outputs
-.. _tests: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|tests
-.. _help: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|help
-.. _citations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool|citations
+.. _description: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-description
+.. _macros: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-macros
+.. _requirements: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements
+.. _stdio: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-stdio
+.. _version_command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-version-command
+.. _command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-command
+.. _configfiles: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-configfiles
+.. _inputs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-inputs
+.. _outputs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-outputs
+.. _tests: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-tests
+.. _help: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-help
+.. _citations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-citations
 .. _bedtools: http://bedtools.readthedocs.org/en/latest/content/tools/slop.html
 .. _slop: https://github.com/galaxyproject/tools-iuc/blob/master/tools/bedtools/slopBed.xml
 .. _Galaxy: https://github.com/galaxyproject/galaxy
