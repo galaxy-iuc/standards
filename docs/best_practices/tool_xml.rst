@@ -92,7 +92,10 @@ can make assertions about the output file contents.
 Testing error conditions is also important. Recent development now
 allows tests say if the test should fail, and to make assertions about
 the tool's stdout and stderr text (e.g. check expected summary text or
-warning messages appear).
+warning messages appear). See `planemo docs <https://planemo.readthedocs.io/en/latest/writing_how_do_i.html#test-failure-states>`__ for more information.
+
+When tools contain output filters, tests should be included that verify
+this filtering occurs. See `planemo docs <https://planemo.readthedocs.io/en/latest/writing_how_do_i.html#test-output-filters-work>`__ for more information.
 
 Booleans
 --------
