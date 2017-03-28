@@ -260,8 +260,9 @@ Coding Style
 
   *  name
   *  type
-  *  value | truevalue | falsevalue
-  *  [checked]
+  *  truevalue | falsevalue
+  *  value | checked
+  *  optional
   *  label
   *  help 
 
