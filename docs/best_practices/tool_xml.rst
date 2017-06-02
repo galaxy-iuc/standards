@@ -32,7 +32,7 @@ based on the short ID. Otherwise they would need to use the long
 
 Some simple rules for generating tool IDs:
 
--  Tool IDs should contain only ``[a-z0-9_-]``. 
+-  Tool IDs should contain only ``[a-z0-9_-]``.
 -  Multiple words should be separated by underscore or dashes
 -  Suite tools should prefix their ids with the suite name. E.g. ``bedtools_*``
 
@@ -258,13 +258,14 @@ Coding Style
 * param names should be readable and understandable, e.g. using the long option name of the wrapped tool
 * Order of parameter attributes:
 
-  *  name
-  *  type
-  *  truevalue | falsevalue
-  *  value | checked
-  *  optional
-  *  label
-  *  help 
+  * name
+  * argument
+  * type
+  * truevalue | falsevalue
+  * value | checked
+  * optional
+  * label
+  * help
 
 .. _description: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-description
 .. _macros: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-macros
