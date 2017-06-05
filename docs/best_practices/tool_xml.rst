@@ -72,14 +72,20 @@ a "sentence" like structure.
 In the above examples the tool name is rendered in fixed width text, and the
 rest is the tool description.
 
-Parameter help
---------------
+Parameter name, argument and help
+---------------------------------
 
-The help section should include the long argument name (but this should
-not be in the tool label). E.g. ``help="(--max)"``. This is useful to give
+The ``argument`` attribute of ``<param>`` should include the long form of the
+underlying tool parameter, e.g. ``argument="--max"``. This is automatically
+displayed inside the parameter help and is useful to give
 the user the chance to go to the original documentation and map the
 Galaxy UI element to the actual parameter. It also makes debugging
 easier if the user is talking to non-Galaxy developers.
+
+When ``argument`` is specified, the ``name`` attribute becomes optional and, if
+not included, is derived from ``argument`` by stripping any initial dash. This
+derived name can be used inside the ``<command>`` element to refer to the
+parameter value as you would normally do with the ``name`` attribute.
 
 Tests
 -----
