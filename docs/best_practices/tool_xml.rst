@@ -109,25 +109,34 @@ this filtering occurs. See `planemo docs <https://planemo.readthedocs.io/en/late
 Booleans
 --------
 
-truevalue and falsevalue should have the actual parameter included. This
-makes it really easy to reference the param name in the Cheetah command
-section.
+``truevalue`` and ``falsevalue`` attributes of ``<param>`` should contain the
+underlying tool parameter. This makes it really easy to reference the param name
+in the Cheetah ``<command>`` section.
 
 .. code:: xml
 
-    <param name=”strict” truevalue=”--enable-strict” falsevalue=””>
+    <command>
+    ...
     $strict
+    ...
+    </command>
+    <inputs>
+        ...
+        <param name=”strict” truevalue=”--enable-strict” falsevalue=””>
 
 Boolean should not be used as a conditional for other options. For dynamic
-options, please use a ``select`` input type as described in Dynamic Options
-below.
+options, please use a ``select`` input type as described in the Dynamic Options
+section below.
 
 Dynamic Options
 ---------------
 
-Options that are conditionally hidden (such as "Advanced Options") should use
-a ``select`` input type and not a boolean. The user should not expect a boolean
-to change the content of the form.
+Options that are conditionally hidden (using the ``<conditional>`` element)
+should use a ``select`` input type and not a ``boolean``. The user may not
+expect a boolean checkbox to change the content of a form.
+
+To create an "Advanced options" section which is normally hidden and the user
+can expand, use a ``<section>`` element, not a ``<conditional>``.
 
 Command tag
 -----------
