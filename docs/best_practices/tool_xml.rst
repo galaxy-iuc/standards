@@ -86,6 +86,9 @@ When ``argument`` is specified, the ``name`` attribute becomes optional and, if
 not included, is derived from ``argument`` by stripping any initial dash. This
 derived name can be used inside the ``<command>`` element to refer to the
 parameter value as you would normally do with the ``name`` attribute.
+If the stripped ``argument`` contains internal dashes (e.g. ``--ultimate-max``),
+starts with a digit or otherwise violates the rules for Cheetah placeholders,
+you should specify a valid ``name`` attribute for the parameter.
 
 Tests
 -----
