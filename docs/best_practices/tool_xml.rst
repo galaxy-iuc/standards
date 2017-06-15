@@ -142,6 +142,11 @@ escaping (``&amp;``).
 All Cheetah variables for text parameters, input and output files must be
 single-quoted, e.g. ``'${var_name}'``.
 
+For composite datatypes the recommended attribute to access the associated
+directory name differs for inputs (e.g. ``$input.extra_files_path``) versus
+outputs (e.g. ``$output.files_path``). This difference is historical, and
+it is hoped this will be harmonised in a future Galaxy release.
+
 If you need to execute more than one shell command, concatenate them with a
 double ampersand (``&&``), so that an error in a command will abort the
 execution of the following ones.
