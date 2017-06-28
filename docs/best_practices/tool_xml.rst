@@ -32,7 +32,7 @@ based on the short ID. Otherwise they would need to use the long
 
 Some simple rules for generating tool IDs:
 
--  Tool IDs should contain only ``[a-z0-9_-]``. 
+-  Tool IDs should contain only ``[a-z0-9_-]``.
 -  Multiple words should be separated by underscore or dashes
 -  Suite tools should prefix their ids with the suite name. E.g. ``bedtools_*``
 
@@ -72,14 +72,23 @@ a "sentence" like structure.
 In the above examples the tool name is rendered in fixed width text, and the
 rest is the tool description.
 
-Parameter help
---------------
+Parameter name, argument and help
+---------------------------------
 
-The help section should include the long argument name (but this should
-not be in the tool label). E.g. ``help="(--max)"``. This is useful to give
+The ``argument`` attribute of ``<param>`` should include the long form of the
+underlying tool parameter, e.g. ``argument="--max"``. This is automatically
+displayed inside the parameter help and is useful to give
 the user the chance to go to the original documentation and map the
 Galaxy UI element to the actual parameter. It also makes debugging
 easier if the user is talking to non-Galaxy developers.
+
+When ``argument`` is specified, the ``name`` attribute becomes optional and, if
+not included, is derived from ``argument`` by stripping any initial dash. This
+derived name can be used inside the ``<command>`` element to refer to the
+parameter value as you would normally do with the ``name`` attribute.
+If the stripped ``argument`` contains internal dashes (e.g. ``--ultimate-max``),
+starts with a digit or otherwise violates the rules for Cheetah placeholders,
+you should specify a valid ``name`` attribute for the parameter.
 
 Tests
 -----
@@ -263,13 +272,14 @@ Coding Style
 * param names should be readable and understandable, e.g. using the long option name of the wrapped tool
 * Order of parameter attributes:
 
-  *  name
-  *  type
-  *  truevalue | falsevalue
-  *  value | checked
-  *  optional
-  *  label
-  *  help 
+  * name
+  * argument
+  * type
+  * truevalue | falsevalue
+  * value | checked
+  * optional
+  * label
+  * help
 
 .. _description: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-description
 .. _macros: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-macros
