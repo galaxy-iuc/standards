@@ -203,8 +203,8 @@ If you have produced images detailing how your tool works (e.g. `bedtools`_), it
 might be nice for those images to be included in the Galaxy tool documentation!
 
 Images should be placed in a subdirectory, ``./static/images/``, and referenced
-in your tool help as ``.. image:: my-picture.png``. This can be seen in the
-IUC's wrappers, such as the one for the bedtools `slop`_ command.
+in your tool help as ``.. image:: $PATH_TO_IMAGES/my-picture.png``. This can be
+seen in the IUC's wrappers, such as the one for the bedtools `slop`_ command.
 
 
 Tool Dependency Package
