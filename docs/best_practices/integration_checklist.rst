@@ -39,11 +39,12 @@ Creating the Tool Wrapper
       test.
 
 - Supply at least one tool test.
-- If your tool uses ``tool-data``:
+- If your tool uses ``tool-data`` check that your tool folder contains these files:
 
-    - Add files to the tool-data folder
-    - Provide the related ``data_name.loc.sample`` file
-    - Provide the ``tool_data_table_conf.xml.sample`` file
+    - ``tool_data_table_conf.xml.sample``
+    - ``tool_data_table_conf.xml.test``
+    - ``tool-data/data_table_name.loc.sample``
+    - ``test-data/data_table_name.loc``
 
 - Check your tool file with ``planemo lint``
 - Run functional tool tests in a local Galaxy with ``planemo test``
