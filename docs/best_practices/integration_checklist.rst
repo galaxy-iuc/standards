@@ -23,12 +23,13 @@ Creating the Tool Wrapper
 -------------------------
 
 - Create your tool wrapper with a command like ``planemo tool_init --id 'tool_name' --name 'Tool description'``
-
     - Find an appropriate name and ID by consulting the IUC's Best Practices List.
-
 - Fill in your requirements section in the Tool file with the conda package's name and version number.
+- If your tool uses ``tool-data``:
+    - Provide the comment-only tool-data/data_table_name.loc.sample file
+    - Provide the comment-only tool_data_table_conf.xml.sample file
+- Supply at least one tool test.
 - Add test-data
-
     - Fill test-data directory with at least one input file and the expected
       output file. The primary output is a good choice for testing. Don't
       forget the use of ``sim_size`` if variable data is included.
@@ -37,15 +38,11 @@ Creating the Tool Wrapper
       have to download an entire copy of the test data. If the sum of your
       test-data files is larger than that, consider use of the ``contains``
       test.
-
-- Supply at least one tool test.
-- If your tool uses ``tool-data`` check that your tool folder contains these files:
-
-    - ``tool_data_table_conf.xml.sample``
-    - ``tool_data_table_conf.xml.test``
-    - ``tool-data/data_table_name.loc.sample``
-    - ``test-data/data_table_name.loc``
-
+    - If your tool uses tool-data: 
+        - Provide a tool_data_table_conf.xml.test, which is an uncommented version of tool_data_table_conf.xml.sample containing the path to the loc file for testing: <file path="${__HERE__}/test-data/data_table_name.loc" />
+          (Please note the use of ${__HERE__} to indicate the directory where the tool is).
+        - Provide a .loc file for testing in test-data/data_table_name.loc
+        - For a good example of how to test parameters from data tables, please see: https://github.com/galaxyproject/tools-devteam/tree/master/tools/bowtie_wrappers
 - Check your tool file with ``planemo lint``
 - Run functional tool tests in a local Galaxy with ``planemo test``
 - Serve the tool on a local Galaxy instance for manual verification that everything looks as expected with the ``planemo serve`` command
