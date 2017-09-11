@@ -10,7 +10,7 @@ Before ToolShed
 
 - A `GitHub <https://github.com/>`__ repository should exist for your wrappers, either one you own, or perhaps you are contributing to the `IUC's repository <https://github.com/galaxyproject/tools-iuc>`__.
 - A tool directory should exist for the specific set of tools or related functionality you are wrapping.
-- Check `Bioconda <https://bioconda.github.io/>`__ for available packages required for the tool you are wrapping. If they do not exist, you may need to create them. The `IUC <https://gitter.im/galaxy-iuc/iuc>`__ will be happy to help you with doing this.
+- Check `Bioconda <https://bioconda.github.io/>`__ for available packages required for the tool you are wrapping. If they do not exist, you may need to create them. The `IUC <https://galaxyproject.org/iuc>`__ will be happy to help you with doing this.
 - `Planemo <http://planemo.readthedocs.io/en/latest/readme.html>`__ should be installed (``pip install -U planemo``)
 - You will need to have credentials to access your ToolShed (either the `Main
   ToolShed <https://toolshed.g2.bx.psu.edu/>`__, or your local Galactic ToolShed).
@@ -23,16 +23,16 @@ Creating the Tool Wrapper (XML File)
 - Create your tool wrapper with a command like ``planemo tool_init --id 'tool_name' --name 'Tool description'``. 
 - Alternatively, you could copy and modify `an existing IUC wrapper <https://github.com/galaxyproject/tools-iuc/tree/master/tools>`__.
 - Give your tool an appropriate ``ID`` and ``name`` by consulting the `IUC's Best Practices for Tools <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html>`__. The ``ID`` is usually the same as the name of the tool XML file and directory.
-- Define a `Version number <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-versions>`__ for the wrapper. If it is the first wrapper, is recommended to use the same version as the tool in the requirement.
-- Add a short `Tool Description <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-descriptions>`__.
-- Fill in the `Requirements <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements>`__ section with the conda package name and version number for the tool and it's dependencies.
-- Add the `Version command <https://docs.galaxyproject.org/en/master/dev/schema.html#tool-version-command>`__ that specifies the command to get the tool’s version.
-- Add the `Command <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#command-tag>`__ section. The command to run the tool must be within `CDATA tags <https://en.wikipedia.org/wiki/CDATA>`__, written in `Cheetah <http://cheetahtemplate.org/>`__ and conform to `PEP 8 <http://pep8.org/>`__. You should add `Exit Code detection <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#exit-code-detection>`__ and **use single quotes** for all Input and Output parameters of type ``data`` and ``text``.
+- Define a `Tool Version <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-versions>`__ for the wrapper. If it is the first wrapper, is recommended to use the same version as the tool in the requirement.
+- Add a short tool `Description <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-descriptions>`__.
+- Fill in the `Requirements <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements>`__ section with the conda package name and version number for the tool and its dependencies.
+- Add the `Version Command <https://docs.galaxyproject.org/en/master/dev/schema.html#tool-version-command>`__ that specifies the command to get the tool’s version.
+- Add the `Command <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#command-tag>`__ section. The command to run the tool must be within `CDATA tags <https://en.wikipedia.org/wiki/CDATA>`__, written in `Cheetah <http://cheetahtemplate.org/>`__ and conform to `PEP 8 <http://pep8.org/>`__. You should add `Exit Code detection <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#exit-code-detection>`__ and **use single quotes** for all Input and Output parameters of type ``data``, ``data_collection`` and ``text``.
 - Supply at least one `Input <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-inputs>`__ with a description of parameters. Add `Validators <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-inputs-param-validator>`__ to user input fields.
 - Supply at least one `Output <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-outputs>`__ with a description of parameters. For Output that is optionally created, use `Filters <https://docs.galaxyproject.org/en/master/dev/schema.html#tool-outputs-data-filter>`__.
 - Supply at least one `Test <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tests>`__. The primary output is a good choice for testing. Don't forget the use of ``sim_size`` if variable data is included.
 - Add a `Help <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#help-tag>`__ section written in `valid reStructuredText <http://rst.ninjs.org>`__ within CDATA tags.
-- Add a `Citation <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-citations>`__ section with a citation for the tool, preferably a `DOI <http://www.doi.org/>`__.
+- Add a `Citation <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-citations>`__ section with a citation for the tool, preferably a `DOI <https://www.doi.org/>`__.
 - If your tool uses `built-in data <https://galaxyproject.org/admin/data-integration>`__:
     - Provide the comment-only ``tool-data/data_table_name.loc.sample`` file
     - Provide the comment-only ``tool_data_table_conf.xml.sample`` file
