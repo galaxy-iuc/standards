@@ -251,6 +251,9 @@ Coding Style
 
   * `description`_
   * `macros`_
+  * `edam_topics`_
+  * `edam_operations`_
+  * [parallelism]
   * `requirements`_
   * [code]
   * `stdio`_
@@ -259,6 +262,7 @@ Coding Style
   * environment_variables
   * `configfiles`_
   * `inputs`_
+  * `request_param_translation`_
   * `outputs`_
   * `tests`_
   * `help`_
@@ -283,12 +287,15 @@ Coding Style
 
 .. _description: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-description
 .. _macros: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-macros
+.. _edam_topics: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-topics
+.. _edam_operations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-operations
 .. _requirements: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements
 .. _stdio: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-stdio
 .. _version_command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-version-command
 .. _command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-command
 .. _configfiles: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-configfiles
 .. _inputs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-inputs
+.. _request_param_translation: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-request-param-translation
 .. _outputs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-outputs
 .. _tests: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-tests
 .. _help: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-help
