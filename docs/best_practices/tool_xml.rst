@@ -235,8 +235,8 @@ source.
 Datatypes
 ---------
 
-For now, the recommended practice is to push new datatypes to the `Galaxy`_
-repository.
+For now, the recommended practice is to push new datatypes to the
+`Galaxy repository`_.
 
 Data Managers
 -------------
@@ -268,10 +268,10 @@ Coding Style
   * `help`_
   * `citations`_
 
-* Cheetah code should also be indented and mainly PEP8 conformant
-* Large XML elements may be broken into several lines
-
-  * label and help attributes can be on a new line
+* Cheetah code should also be indented and mainly `PEP8`_ conformant
+* XML elements should normally have all attributes on a single line for easier
+  searchability, but for large XML elements the ``label`` and ``help``
+  attributes can be on a new line.
 
 * param names should be readable and understandable, e.g. using the long option name of the wrapped tool
 * Order of parameter attributes:
@@ -286,6 +286,9 @@ Coding Style
   * optional
   * label
   * help
+
+* Python code should be Python3-compatible and `PEP8`_ conformant. Imports should
+  follow the `smarkets`_ style.
 
 .. _description: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-description
 .. _macros: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-macros
@@ -304,4 +307,6 @@ Coding Style
 .. _citations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-citations
 .. _bedtools: http://bedtools.readthedocs.org/en/latest/content/tools/slop.html
 .. _slop: https://github.com/galaxyproject/tools-iuc/blob/master/tools/bedtools/slopBed.xml
-.. _Galaxy: https://github.com/galaxyproject/galaxy
+.. _Galaxy repository: https://github.com/galaxyproject/galaxy
+.. _PEP8: https://www.python.org/dev/peps/pep-0008/
+.. _smarkets: https://github.com/PyCQA/flake8-import-order/blob/master/tests/test_cases/complete_smarkets.py
