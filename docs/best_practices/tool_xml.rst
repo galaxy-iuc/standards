@@ -132,11 +132,14 @@ Dynamic Options
 ---------------
 
 Options that are conditionally hidden (using the ``<conditional>`` element)
-should use a ``select`` input type and not a ``boolean``. The user may not
+should use a ``select`` param type and not a ``boolean``. The user may not
 expect a boolean checkbox to change the content of a form.
 
 To create an "Advanced options" section which is normally hidden and the user
-can expand, use a ``<section>`` element, not a ``<conditional>``.
+can expand, a ``<section>`` element can be used instead of a ``<conditional>``.
+Beware that parameters inside a hidden section still have a value set, which is
+used when creating the job command, while in a "closed" conditional the
+non-visible parameters don't have a value.
 
 Command tag
 -----------
