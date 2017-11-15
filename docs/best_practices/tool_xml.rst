@@ -279,7 +279,9 @@ Coding Style
   * name
   * argument
   * type
-  * truevalue | falsevalue
+  * format
+  * min | truevalue
+  * max | falsevalue
   * value | checked
   * optional
   * label
