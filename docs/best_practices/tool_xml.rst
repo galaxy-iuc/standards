@@ -21,6 +21,23 @@ attribute of the XML tool element, e.g.
 and should be incremented with each change of the wrapper that is
 released to the Tool Shed (except for cosmetic modifications).
 
+The value should follow the
+`PEP 440 <https://www.python.org/dev/peps/pep-0440/>`__ specification.
+
+If the Galaxy tool is a wrapper for an underlying tool, we recommend to set the
+``version`` attribute to something like ``@TOOL_VERSION@+galaxyN``, where:
+
+- ``@TOOL_VERSION@`` is a
+  `macro token <https://planemo.readthedocs.io/en/latest/writing_advanced.html#macro-tokens>`__
+  you need to define, which you can also re-use in the corresponding
+  ``<requirement>`` element.
+- ``N`` is a wrapper-specific version number, starting at 0, which should be
+  increased when you update the wrapper without changing the tool version.
+
+If instead the Galaxy tool cannot be identified with a single underlying tool,
+the ``+galaxyN`` local version identifier should be omitted, and any version
+value can be used, as long as it respects the PEP 440 specification.
+
 Tool ids
 --------
 
