@@ -31,8 +31,9 @@ If the Galaxy tool is a wrapper for an underlying tool, we recommend to set the
   `macro token <https://planemo.readthedocs.io/en/latest/writing_advanced.html#macro-tokens>`__
   you need to define, which you can also re-use in the corresponding
   ``<requirement>`` element.
-- ``N`` is a wrapper-specific version number, starting at 0, which should be
-  increased when you update the wrapper without changing the tool version.
+- ``N`` is a wrapper-specific integer version number, starting at 0, which
+  should be increased when you update the wrapper without changing the tool
+  version, and reset to 0 when the tool version is increased.
 
 If instead the Galaxy tool cannot be identified with a single underlying tool,
 the ``+galaxyN`` local version identifier should be omitted, and any version
