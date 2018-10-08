@@ -41,10 +41,10 @@ If instead the Galaxy tool cannot be identified with a single underlying tool,
 the ``+galaxyN`` local version identifier should be omitted, and any version
 value can be used, as long as it respects the PEP 440 specification.
 
-For tools whose wrapper version is (for historic reasons) already larger than
-the version of the underlying program only the minor version number shall be 
-increased if this is likely to bring the two version in sync in a reasonable 
-time. 
+For tools whose wrapper version is (for historical reasons) already greater than
+the version of the underlying tool, only the minor version number shall be
+increased if this is likely to bring the two version in sync in a reasonable
+time.
 
 Tool ids
 --------
