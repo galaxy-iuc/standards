@@ -108,12 +108,13 @@ Galaxy UI element to the actual parameter. It also makes debugging
 easier if the user is talking to non-Galaxy developers.
 
 When ``argument`` is specified, the ``name`` attribute becomes optional and, if
-not included, is derived from ``argument`` by stripping any initial dash. This
+not included, is derived from ``argument`` by stripping any leading dashes
+and replacing internal dashes by underscores (the later since release 19.09). This
 derived name can be used inside the ``<command>`` element to refer to the
 parameter value as you would normally do with the ``name`` attribute.
-If the stripped ``argument`` contains internal dashes (e.g. ``--ultimate-max``),
-starts with a digit or otherwise violates the rules for Cheetah placeholders,
-you should specify a valid ``name`` attribute for the parameter.
+Note that if the automatically generated name violates the rules for valid Cheetah 
+placeholders (i.e. consist of alphanumeric characters or underscore and must not
+start with a digit) you should specify a valid ``name`` attribute for the parameter.
 
 Tests
 -----
