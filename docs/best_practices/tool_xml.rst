@@ -29,16 +29,14 @@ If the Galaxy tool is a wrapper for an underlying tool, we recommend to:
 - define a ``@TOOL_VERSION@``
   `macro token <https://planemo.readthedocs.io/en/latest/writing_advanced.html#macro-tokens>`__,
   which you can also re-use in the corresponding ``<requirement>`` element;
-- set the tool ``version`` attribute to:
-
-  - ``@TOOL_VERSION@`` or ``@TOOL_VERSION@+galaxy0`` for the first wrapper
-    release of each version of the underlying tool;
-  - ``@TOOL_VERSION@+galaxyN`` for the following wrapper releases, where ``N``
-    is an integer number to be increased whenever you update the wrapper
-    without changing the underlying tool version.
+- define a ``@GALAXY_VERSION@`` macro token. This should be set to:
+  - 0 for the first wrapper release of each version of the underlying tool
+  - an integer number to be increased by 1 whenever you update the wrapper
+    without changing the underlying `@TOOL_VERSION@`.
+- set the tool ``version`` attribute to ``@TOOL_VERSION@+galaxy@GALAXY_VERSION@``.
 
 If instead the Galaxy tool cannot be identified with a single underlying tool,
-the ``+galaxyN`` local version identifier should be omitted, and any version
+the ``+galaxy@GALAXY_VERSION@`` local version identifier should be omitted, and any version
 value can be used, as long as it respects the PEP 440 specification.
 
 For tools whose wrapper version is (for historical reasons) already greater than
