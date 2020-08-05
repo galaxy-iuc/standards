@@ -30,7 +30,8 @@ If the Galaxy tool is a wrapper for an underlying tool, we recommend to:
   `macro token <https://planemo.readthedocs.io/en/latest/writing_advanced.html#macro-tokens>`__,
   which you can also re-use in the corresponding ``<requirement>`` element;
 - define a ``@GALAXY_VERSION@`` macro token. This should be set to:
-  - 0 for the first wrapper release of each version of the underlying tool
+
+  - 0 for the first wrapper release of each version of the underlying tool.
   - an integer number to be increased by 1 whenever you update the wrapper
     without changing the underlying `@TOOL_VERSION@`.
 - set the tool ``version`` attribute to ``@TOOL_VERSION@+galaxy@GALAXY_VERSION@``.
