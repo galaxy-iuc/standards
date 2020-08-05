@@ -33,7 +33,7 @@ If the Galaxy tool is a wrapper for an underlying tool, we recommend to:
 
   - 0 for the first wrapper release of each version of the underlying tool.
   - an integer number to be increased by 1 whenever you update the wrapper
-    without changing the underlying `@TOOL_VERSION@`.
+    without changing the underlying ``@TOOL_VERSION@``.
 - set the tool ``version`` attribute to ``@TOOL_VERSION@+galaxy@GALAXY_VERSION@``.
 
 If instead the Galaxy tool cannot be identified with a single underlying tool,
