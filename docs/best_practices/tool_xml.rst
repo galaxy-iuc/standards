@@ -41,7 +41,7 @@ If the Galaxy tool is a wrapper for an underlying tool, we recommend to:
   is preferred not to use a ``@VERSION_SUFFIX@`` token (e.g. to allow bumping
   the version only for a specific tool in a suite), the tool ``version``
   attribute should be simply set to ``@TOOL_VERSION@+galaxyN``, where N is an
-  integer following the same rules of ``@VERSION_SUFFIX@``.
+  integer following the same rules as ``@VERSION_SUFFIX@``.
 
 If instead the Galaxy tool cannot be identified with a single underlying tool,
 the ``+galaxy@VERSION_SUFFIX@`` local version identifier should be omitted, and any version
