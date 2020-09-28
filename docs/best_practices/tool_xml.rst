@@ -38,9 +38,10 @@ If the Galaxy tool is a wrapper for an underlying tool, we recommend to:
   - to be increased by 1 whenever you update the wrapper without changing
     the underlying ``@TOOL_VERSION@``.
 - set the tool ``version`` attribute to ``@TOOL_VERSION@+galaxy@VERSION_SUFFIX@``. If it
-  is preferred not to use a ``@VERSION_SUFFIX@`` token, the version suffix can be specified
-  by simply using an integer ``N``, in which case the tool ``version`` attribute should be set
-  to ``@TOOL_VERSION@+galaxyN``.
+  is preferred not to use a ``@VERSION_SUFFIX@`` token (e.g. to allow bumping
+  the version only for a specific tool in a suite), the tool ``version``
+  attribute should be simply set to ``@TOOL_VERSION@+galaxyN``, where N is an
+  integer following the same rules of ``@VERSION_SUFFIX@``.
 
 If instead the Galaxy tool cannot be identified with a single underlying tool,
 the ``+galaxy@VERSION_SUFFIX@`` local version identifier should be omitted, and any version
