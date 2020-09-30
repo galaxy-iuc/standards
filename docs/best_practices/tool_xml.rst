@@ -28,17 +28,23 @@ If the Galaxy tool is a wrapper for an underlying tool, we recommend to:
 
 - define a ``@TOOL_VERSION@``
   `macro token <https://planemo.readthedocs.io/en/latest/writing_advanced.html#macro-tokens>`__,
-  which you can also re-use in the corresponding ``<requirement>`` element;
-- set the tool ``version`` attribute to:
+  which you should also re-use in the corresponding ``<requirement>`` element;
+- optionally, define a ``@VERSION_SUFFIX@`` macro token, which may be placed
+  either in the tool wrapper or in a shared macro file. This should be set to
+  an integer number:
 
-  - ``@TOOL_VERSION@`` or ``@TOOL_VERSION@+galaxy0`` for the first wrapper
-    release of each version of the underlying tool;
-  - ``@TOOL_VERSION@+galaxyN`` for the following wrapper releases, where ``N``
-    is an integer number to be increased whenever you update the wrapper
-    without changing the underlying tool version.
+  - starting at 0 for the first wrapper release of each version of the
+    underlying tool;
+  - to be increased by 1 whenever you update the wrapper without changing
+    the underlying ``@TOOL_VERSION@``.
+- set the tool ``version`` attribute to ``@TOOL_VERSION@+galaxy@VERSION_SUFFIX@``. If it
+  is preferred not to use a ``@VERSION_SUFFIX@`` token (e.g. to allow bumping
+  the version only for a specific tool in a suite), the tool ``version``
+  attribute should be simply set to ``@TOOL_VERSION@+galaxyN``, where N is an
+  integer following the same rules as ``@VERSION_SUFFIX@``.
 
 If instead the Galaxy tool cannot be identified with a single underlying tool,
-the ``+galaxyN`` local version identifier should be omitted, and any version
+the ``+galaxy@VERSION_SUFFIX@`` local version identifier should be omitted, and any version
 value can be used, as long as it respects the PEP 440 specification.
 
 For tools whose wrapper version is (for historical reasons) already greater than
