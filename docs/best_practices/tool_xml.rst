@@ -110,7 +110,7 @@ Tool cross-references are identifiers in software registries and catalogs such a
 `bio.tools`_. Please reference only the tool which is wrapped, not dependencies.
 
 EDAM Topics and Operations
------------
+--------------------------
 
 `EDAM`_ terms are used to give a description of the tool's scientific domain and the
 functionalities it provides. Help picking EDAM terms can be provided by:
