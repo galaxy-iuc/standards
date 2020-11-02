@@ -103,6 +103,25 @@ a "sentence" like structure.
 In the above examples the tool name is rendered in fixed width text, and the
 rest is the tool description.
 
+Tool cross-references
+---------------------
+
+Tool cross-references are identifiers in software registries and catalogs such as
+`bio.tools`_. Please reference only the tool which is wrapped, not dependencies.
+
+EDAM Topics and Operations
+-----------
+
+`EDAM`_ terms are used to give a description of the tool's scientific domain and the
+functionalities it provides. Help picking EDAM terms can be provided by:
+
+- browsers and visualizers, most of which are listed on the `EDAM`_ webpage.
+- descriptions of tools available in `bio.tools`_, many of which include the topics and operations relevant for the tool.
+
+When picking EDAM terms, avoid `root terms` such as `Topic` and `Operation`, and pick the most specific terms available. If you feel like some terms are missing to describe the tool, do not hesitate to [ask for new terms](https://edamontologydocs.readthedocs.io/en/latest/getting_involved.html#suggestions-requests).
+
+More detailed guidelines to pick EDAM terms are also available in the [bio.tools curators guide](https://biotools.readthedocs.io/en/latest/curators_guide.html#edamannotations) and the [EDAM ontology users guide](https://edamontologydocs.readthedocs.io/en/latest/users_guide.html#picking-concepts).
+
 Parameter name, argument and help
 ---------------------------------
 
@@ -294,6 +313,7 @@ Coding Style
 * Order of XML elements:
 
   * `description`_
+  * `xrefs`_
   * `macros`_
   * `edam_topics`_
   * `edam_operations`_
@@ -335,6 +355,7 @@ Coding Style
   follow the `smarkets`_ style.
 
 .. _description: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-description
+.. _xrefs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-xrefs
 .. _macros: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-macros
 .. _edam_topics: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-topics
 .. _edam_operations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-operations
@@ -354,3 +375,5 @@ Coding Style
 .. _Galaxy repository: https://github.com/galaxyproject/galaxy
 .. _PEP8: https://www.python.org/dev/peps/pep-0008/
 .. _smarkets: https://github.com/PyCQA/flake8-import-order/blob/master/tests/test_cases/complete_smarkets.py
+.. _bio.tools: https://bio.tools
+.. _EDAM: http://edamontology.org
