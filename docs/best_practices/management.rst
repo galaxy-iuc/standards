@@ -12,6 +12,6 @@ simple as defining your ``~/.planemo.yml`` and running ``planemo shed_upload
 Automated Management
 --------------------
 
-The IUC has developed some travis configurations in order to assist in
+The IUC has developed github actions configurations in order to assist in
 continually synchronizing your GitHub repository with the toolshed components.
-You can view these in `.travis.yml in the IUC's Github Repo <https://github.com/galaxyproject/tools-iuc/blob/master/.travis.yml>`__
+You can view these in `.github/workflows in the IUC's Github Repo <https://github.com/galaxyproject/tools-iuc/blob/master/.github/workflows>`__
