@@ -91,10 +91,7 @@ quickly apply that to the other available VSearch tools.
 Tool profile
 ------------
 
-Tools should define a recent profile:
-
-- for new tools IUC requires the most recent Galaxy release
-- tool updates should try to use a profile not older than 2 years. 
+Tools should define a recent profile, i.e. a profile not older than 1 year. 
 
 Tool Descriptions
 -----------------
