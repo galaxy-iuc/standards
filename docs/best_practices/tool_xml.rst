@@ -88,6 +88,14 @@ would have a hard time finding it and gathering context about its functionality.
 With the VSearch prefix, once a user learns what one VSearch tool does, they can
 quickly apply that to the other available VSearch tools.
 
+Tool Names
+----------
+
+Tools should define a recent profile:
+
+- for new tools IUC requires the most recent Galaxy release
+- tool updates should try to use a profile not older than 2 years. 
+
 Tool Descriptions
 -----------------
 
