@@ -88,6 +88,11 @@ would have a hard time finding it and gathering context about its functionality.
 With the VSearch prefix, once a user learns what one VSearch tool does, they can
 quickly apply that to the other available VSearch tools.
 
+Tool profile
+------------
+
+Tools should define a recent profile, i.e. a profile not older than 1 year. 
+
 Tool Descriptions
 -----------------
 
