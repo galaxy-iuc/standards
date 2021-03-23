@@ -166,7 +166,7 @@ Data parameters
 ---------------
 
 If a (g)zipped data type is available (e.g. ``fasta.gz`` or ``fastq.gz``) then
-data parameters should accept both the zipped and the unzipper data type.
+data parameters should accept both the zipped and the unzipped data type.
 
 Booleans
 --------
