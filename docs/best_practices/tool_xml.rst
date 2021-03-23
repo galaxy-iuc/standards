@@ -165,7 +165,7 @@ this filtering occurs. See `planemo docs <https://planemo.readthedocs.io/en/late
 Data parameters
 ---------------
 
-If a (gz)ipped data type is available (e.g. ``fasta.gz`` or ``fastq.gz``) then
+If a (g)zipped data type is available (e.g. ``fasta.gz`` or ``fastq.gz``) then
 data parameters should accept both the zipped and the unzipper data type.
 
 Booleans
