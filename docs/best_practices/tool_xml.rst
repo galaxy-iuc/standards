@@ -162,6 +162,12 @@ warning messages appear). See `planemo docs <https://planemo.readthedocs.io/en/l
 When tools contain output filters, tests should be included that verify
 this filtering occurs. See `planemo docs <https://planemo.readthedocs.io/en/latest/writing_how_do_i.html#test-output-filters-work>`__ for more information.
 
+Data parameters
+---------------
+
+If a (gz)ipped data type is available (e.g. ``fasta.gz`` or ``fastq.gz``) then
+data parameters should accept both the zipped and the unzipper data type.
+
 Booleans
 --------
 
