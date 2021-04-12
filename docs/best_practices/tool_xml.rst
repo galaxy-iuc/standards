@@ -162,6 +162,14 @@ warning messages appear). See `planemo docs <https://planemo.readthedocs.io/en/l
 When tools contain output filters, tests should be included that verify
 this filtering occurs. See `planemo docs <https://planemo.readthedocs.io/en/latest/writing_how_do_i.html#test-output-filters-work>`__ for more information.
 
+Data parameters
+---------------
+
+If a compressed version of a datatype (e.g. ``fasta.gz`` or ``fastqsanger.bz2``)
+is supported by Galaxy, then data parameters should accept both the compressed
+and the uncompressed datatypes. The tool should internally decompress the
+dataset if the underlying tool cannot handle the compressed formats natively.
+
 Booleans
 --------
 
