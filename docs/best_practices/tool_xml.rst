@@ -165,8 +165,10 @@ this filtering occurs. See `planemo docs <https://planemo.readthedocs.io/en/late
 Data parameters
 ---------------
 
-If a (g)zipped data type is available (e.g. ``fasta.gz`` or ``fastq.gz``) then
-data parameters should accept both the zipped and the unzipped data type.
+If a compressed version of a datatype (e.g. ``fasta.gz`` or ``fastqsanger.bz2``)
+is supported by Galaxy, then data parameters should accept both the compressed
+and the uncompressed datatypes. The tool should internally decompress the
+dataset if the underlying tool cannot handle the compressed formats natively.
 
 Booleans
 --------
