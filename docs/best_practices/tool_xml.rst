@@ -320,8 +320,6 @@ Coding Style
   * `description`_
   * `xrefs`_
   * `macros`_
-  * `edam_topics`_
-  * `edam_operations`_
   * [parallelism]
   * `requirements`_
   * [code]
@@ -335,6 +333,9 @@ Coding Style
   * `outputs`_
   * `tests`_
   * `help`_
+  * `xrefs`_
+  * `edam_topics`_
+  * `edam_operations`_
   * `citations`_
 
 * Cheetah code should also be indented and mainly `PEP8`_ conformant
@@ -362,8 +363,6 @@ Coding Style
 .. _description: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-description
 .. _xrefs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-xrefs
 .. _macros: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-macros
-.. _edam_topics: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-topics
-.. _edam_operations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-operations
 .. _requirements: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements
 .. _stdio: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-stdio
 .. _version_command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-version-command
@@ -374,6 +373,9 @@ Coding Style
 .. _outputs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-outputs
 .. _tests: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-tests
 .. _help: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-help
+.. _xrefs: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-xrefs
+.. _edam_topics: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-topics
+.. _edam_operations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-operations
 .. _citations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-citations
 .. _bedtools: http://bedtools.readthedocs.org/en/latest/content/tools/slop.html
 .. _slop: https://github.com/galaxyproject/tools-iuc/blob/master/tools/bedtools/slopBed.xml
