@@ -46,7 +46,7 @@ Testing Your Tool
 - Fill the ``test-data`` directory with at least one input file and the expected
   output file. 
 - It is strongly encouraged that you use small test data sets, ideally
-  under 1 Mb. Every Galaxy instance that downloads your tool will
+  under 500 Kb. Every Galaxy instance that downloads your tool will
   have to download an entire copy of the test data. If the sum of your
   test-data files is larger than that, consider use of ``contains`` and
   test for a small subset of the output, see the `CWPair2 example <https://docs.galaxyproject.org/en/master/dev/schema.html#id80>`__.
