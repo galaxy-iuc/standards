@@ -30,7 +30,7 @@ Galaxy repositories; tools, packages, data managers, and sometimes visualization
 ToolShed Repositories
 ---------------------
 
-A Github repository many correspond to any number of published ToolShed
+A Github repository may correspond to any number of published ToolShed
 repositories.
 
 Every unrestricted tool shed repository should contain a README_ file -
