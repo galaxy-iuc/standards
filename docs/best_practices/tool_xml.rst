@@ -318,10 +318,10 @@ Coding Style
 * Order of XML elements:
 
   * `description`_
-  * `xrefs`_
   * `macros`_
   * `edam_topics`_
   * `edam_operations`_
+  * `xrefs`_
   * [parallelism]
   * `requirements`_
   * [code]
