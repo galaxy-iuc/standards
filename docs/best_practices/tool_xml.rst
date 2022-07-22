@@ -282,13 +282,6 @@ Images should be placed in a subdirectory, ``./static/images/``, and referenced
 in your tool help as ``.. image:: my-picture.png``. This can be seen in the
 IUC's wrappers, such as the one for the bedtools `slop`_ command.
 
-
-Tool Dependency Package
------------------------
-
-If you are using perl/ruby/python/R packages, use the corresponding
-``*_environment`` tags to depend on a specific version of Perl/Ruby ...
-
 Generating Indices
 ------------------
 
