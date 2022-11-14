@@ -38,7 +38,7 @@ Creating the Tool Wrapper (XML File)
     - Provide the comment-only ``tool_data_table_conf.xml.sample`` file.
 - Check that the XML elements and parameters attributes are in the `Order specified in the Best Practices <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#coding-style>`__.
 - If you have a collection of related tools you can try to avoid duplicating XML by using a `Macros XML file <http://planemo.readthedocs.io/en/latest/writing_standalone.html#macros>`__.
-- Use tabs for indentation (4 space indentation is permitted as long as the author is consistent).
+- Use tabs for XML indentation (4 space indentation is permitted as long as the author is consistent).
 
 Testing Your Tool
 -----------------
