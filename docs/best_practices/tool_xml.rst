@@ -315,7 +315,7 @@ TODO
 Coding Style
 ------------
 
-* 4 spaces indent
+* Tabs for indentation (spaces permitted if consistent.)
 * Order of XML elements:
 
   * `description`_
