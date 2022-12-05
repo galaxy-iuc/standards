@@ -315,7 +315,7 @@ TODO
 Coding Style
 ------------
 
-* Tabs for XML indentation (4 spaces permitted if consistent).
+* Tabs for XML (includes command and help blocks, 4 spaces permitted if consistently used across the XML file including aforementioned command and help blocks).
 * Order of XML elements:
 
   * `description`_
