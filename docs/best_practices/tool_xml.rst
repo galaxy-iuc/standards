@@ -52,6 +52,43 @@ the version of the underlying tool, only the minor version number shall be
 increased if this is likely to bring the two version in sync in a reasonable
 time.
 
+
+bio.tools & EDAM
+--------
+
+It is important to link a new Galaxy tool to best practice metadata. A good way to do this
+is by linking the wrapped tool to a `bio.tools entry <https://bio.tools/>`__ .
+
+bio.tools is a global portal for bioinformatics resources that helps researchers to find,
+understand, compare and select resources suitable for their work. The bio.tools registry
+makes use of the `EDAM ontology <http://edamontology.org/page>`__ to annotate tools with
+``Data``, ``Format``, ``Operation`` and ``Topic`` terms.
+
+You can link a Galaxy tool to its bio.tools entry by adding a ``xref`` snippet
+to the tool wrapper: i.e. modifying the ``*.xml`` file. Below is an example ``xml`` for
+`Racon <https://github.com/bgruening/galaxytools/tree/1570f3a28232b4b88385cdfbb68f79d80ff1dabb/tools/racon>`__
+
+.. code:: xml
+    <macros>
+        <import>macros.xml</import>
+    </macros>
+    <xrefs>
+        <xref type="bio.tools">Racon</xref>
+    </xrefs>
+    <expand macro="requirements" />
+    <version_command>racon --version</version_command>
+    <command detect_errors="exit_code"><![CDATA[
+
+If a bio.tools entry does not exist, you should add an entry as follows:
+
+-   Create an account on bio.tools.
+-   Add a new tool, completing as much metadata as possible / available.
+    -   Ensure that you add at least one EDAM ``Topic`` and one EDAM ``Operation``
+to the entry.
+    -   Use `EDAM browser <https://edamontology.github.io/edam-browser/>`__ to make
+this process easier.
+
+
 Tool ids
 --------
 
