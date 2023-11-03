@@ -53,42 +53,6 @@ increased if this is likely to bring the two version in sync in a reasonable
 time.
 
 
-bio.tools & EDAM
---------
-
-It is important to link a new Galaxy tool to best practice metadata. A good way to do this
-is by linking the wrapped tool to a `bio.tools entry <https://bio.tools/>`__ .
-
-bio.tools is a global portal for bioinformatics resources that helps researchers to find,
-understand, compare and select resources suitable for their work. The bio.tools registry
-makes use of the `EDAM ontology <http://edamontology.org/page>`__ to annotate tools with
-``Data``, ``Format``, ``Operation`` and ``Topic`` terms.
-
-You can link a Galaxy tool to its bio.tools entry by adding a ``xref`` snippet
-to the tool wrapper: i.e. modifying the ``*.xml`` file. Below is an example ``xml`` for
-`Racon <https://github.com/bgruening/galaxytools/tree/1570f3a28232b4b88385cdfbb68f79d80ff1dabb/tools/racon>`__
-
-.. code:: xml
-    <macros>
-        <import>macros.xml</import>
-    </macros>
-    <xrefs>
-        <xref type="bio.tools">Racon</xref>
-    </xrefs>
-    <expand macro="requirements" />
-    <version_command>racon --version</version_command>
-    <command detect_errors="exit_code"><![CDATA[
-
-If a bio.tools entry does not exist, you should add an entry as follows:
-
--   Create an account on bio.tools.
--   Add a new tool, completing as much metadata as possible / available.
-    -   Ensure that you add at least one EDAM ``Topic`` and one EDAM ``Operation``
-to the entry.
-    -   Use `EDAM browser <https://edamontology.github.io/edam-browser/>`__ to make
-this process easier.
-
-
 Tool ids
 --------
 
@@ -145,22 +109,62 @@ a "sentence" like structure.
 In the above examples the tool name is rendered in fixed width text, and the
 rest is the tool description.
 
-Tool cross-references
+Tool cross-references (bio.tools)
 ---------------------
 
-Tool cross-references are identifiers in software registries and catalogs such as
-`bio.tools`_. Please reference only the tool which is wrapped, not dependencies.
+It is important to cross-link Galaxy tools to best practice metadata in registries and
+catalogs such as `bio.tools <https://bio.tools/>`__.
 
-EDAM Topics and Operations
---------------------------
+bio.tools is a global portal for bioinformatics resources that helps researchers to find,
+understand, compare and select resources suitable for their work.
+
+You can link a Galaxy tool to its bio.tools entry by adding a ``xref`` snippet
+to the tool wrapper: i.e. modifying the ``*.xml`` file. Below is an example ``xml`` for
+`Racon <https://github.com/bgruening/galaxytools/tree/1570f3a28232b4b88385cdfbb68f79d80ff1dabb/tools/racon>`__
+
+.. code:: xml
+    <macros>
+        <import>macros.xml</import>
+    </macros>
+    <xrefs>
+        <xref type="bio.tools">Racon</xref>
+    </xrefs>
+    <expand macro="requirements" />
+    <version_command>racon --version</version_command>
+    <command detect_errors="exit_code"><![CDATA[
+
+Please reference only the tool which is wrapped, not the dependencies.
+
+If a bio.tools entry does not exist, you should add an entry as follows:
+
+-   Create an account on bio.tools.
+-   Add a new tool, completing as much metadata as possible / available.
+-   Ensure that you add at least one EDAM ``Topic`` and one EDAM ``Operation``
+to the entry (see below).
+
+Tool annotations (EDAM)
+---------------------
+
+The bio.tools registry makes use of the `EDAM ontology <http://edamontology.org/page>`__
+to annotate tools with ``Data``, ``Format``, ``Operation`` and ``Topic`` terms.
 
 `EDAM`_ terms are used to give a description of the tool's scientific domain and the
-functionalities it provides. Help picking EDAM terms can be provided by:
+functionalities it provides. `EDAM browser <https://edamontology.github.io/edam-browser/>`__
+makes the process of picking EDAM terms much easier.
 
-- browsers and visualizers, most of which are listed on the `EDAM`_ webpage.
-- descriptions of tools available in `bio.tools`_, many of which include the topics and operations relevant for the tool.
+Once a bio.tools identifier is added as an ``xref`` in the tool wrapper, the easiest way
+to improve the available EDAM annotations is to update the bio.tools entry metadata.
 
-When picking EDAM terms, avoid `root terms` such as `Topic` and `Operation`, and pick the most specific terms available. If you feel like some terms are missing to describe the tool, do not hesitate to [ask for new terms](https://edamontologydocs.readthedocs.io/en/latest/getting_involved.html#suggestions-requests).
+If you wish to add EDAM annotations directly to a Galaxy tool wrapper, the two options are:
+
+- identify the EDAM annotations available in existing `bio.tools`_ entries for your tools: these
+will include ``Topics`` and ``Operations`` considered relevant for the tool, or
+- if the tool is not in bio.tools, you will need to add a new tool and
+annotate the entry with the relevant EDAM annotations.
+
+When picking EDAM terms, avoid `root terms` such as `Topic` and `Operation`, and pick the
+most specific terms available. If you feel like the terms required to describe the tool are
+missing, do not hesitate to [ask for new terms](https://edamontologydocs.readthedocs.io/en/latest/getting_involved.html#suggestions-requests).
 
 More detailed guidelines to pick EDAM terms are also available in the [bio.tools curators guide](https://biotools.readthedocs.io/en/latest/curators_guide.html#edamannotations) and the [EDAM ontology users guide](https://edamontologydocs.readthedocs.io/en/latest/users_guide.html#picking-concepts).
 
