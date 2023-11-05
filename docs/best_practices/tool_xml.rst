@@ -148,7 +148,7 @@ The bio.tools registry makes use of the `EDAM`_ ontology
 to annotate tools with ``Data``, ``Format``, ``Operation`` and ``Topic`` terms.
 
 `EDAM`_ terms are used to give a description of the tool's scientific domain and the
-functionalities it provides. `EDAM browser <https://edamontology.github.io/edam-browser/>`__
+functionalities it provides. The `EDAM browser <https://edamontology.github.io/edam-browser/>`__
 makes the process of picking EDAM terms much easier.
 
 Once a bio.tools identifier is added as an ``xref`` in the tool wrapper, the easiest way
