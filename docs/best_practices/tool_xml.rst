@@ -160,7 +160,7 @@ and `edam_operations <https://docs.galaxyproject.org/en/latest/dev/schema.html#t
 elements to the tool XML file. This approach is not recommended though, as it risks duplicating the
 tool annotation work in multiple places.
 
-When picking EDAM terms, avoid `root terms` such as `Topic` and `Operation`, and pick the
+When picking EDAM terms, avoid "root terms" such as ``Topic`` and ``Operation``, and pick the
 most specific terms available. If you feel like the terms required to describe the tool are
 missing, do not hesitate to `ask for new terms <https://edamontologydocs.readthedocs.io/en/latest/getting_involved.html#suggestions-requests>`__.
 
