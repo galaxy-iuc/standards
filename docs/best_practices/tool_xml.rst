@@ -162,7 +162,7 @@ tool annotation work in multiple places.
 
 When picking EDAM terms, avoid `root terms` such as `Topic` and `Operation`, and pick the
 most specific terms available. If you feel like the terms required to describe the tool are
-missing, do not hesitate to [ask for new terms](https://edamontologydocs.readthedocs.io/en/latest/getting_involved.html#suggestions-requests).
+missing, do not hesitate to `ask for new terms <https://edamontologydocs.readthedocs.io/en/latest/getting_involved.html#suggestions-requests>`__.
 
 More detailed guidelines to pick EDAM terms are also available in the [bio.tools curators guide](https://biotools.readthedocs.io/en/latest/curators_guide.html#edamannotations) and the [EDAM ontology users guide](https://edamontologydocs.readthedocs.io/en/latest/users_guide.html#picking-concepts).
 
