@@ -159,10 +159,6 @@ Alternatively, you can add EDAM annotations directly to a Galaxy tool by adding 
 and `edam_operations <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-operations>`__
 elements to the tool XML file. This approach is not recommended though, as it risks duplicating the
 tool annotation work in multiple places.
-- identify the EDAM annotations available in existing `bio.tools`_ entries for your tools: these
-will include ``Topics`` and ``Operations`` considered relevant for the tool, or
-- if the tool is not in bio.tools, you will need to add a new tool and
-annotate the entry with the relevant EDAM annotations.
 
 When picking EDAM terms, avoid `root terms` such as `Topic` and `Operation`, and pick the
 most specific terms available. If you feel like the terms required to describe the tool are
