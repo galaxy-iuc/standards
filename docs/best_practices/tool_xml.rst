@@ -52,7 +52,6 @@ the version of the underlying tool, only the minor version number shall be
 increased if this is likely to bring the two version in sync in a reasonable
 time.
 
-
 Tool ids
 --------
 
