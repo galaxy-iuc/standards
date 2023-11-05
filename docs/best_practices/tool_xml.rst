@@ -154,8 +154,11 @@ makes the process of picking EDAM terms much easier.
 Once a bio.tools identifier is added as an ``xref`` in the tool wrapper, the easiest way
 to improve the available EDAM annotations is to update the bio.tools entry metadata.
 
-If you wish to add EDAM annotations directly to a Galaxy tool wrapper, the two options are:
-
+Alternatively, you can add EDAM annotations directly to a Galaxy tool by adding the
+`edam_topics <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-topics>`__
+and `edam_operations <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-operations>`__
+elements to the tool XML file. This approach is not recommended though, as it risks duplicating the
+tool annotation work in multiple places.
 - identify the EDAM annotations available in existing `bio.tools`_ entries for your tools: these
 will include ``Topics`` and ``Operations`` considered relevant for the tool, or
 - if the tool is not in bio.tools, you will need to add a new tool and
