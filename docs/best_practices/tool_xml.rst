@@ -139,7 +139,7 @@ If a bio.tools entry does not exist, you should add an entry as follows:
 -   Create an account on bio.tools.
 -   Add a new tool, completing as much metadata as possible / available.
 -   Ensure that you add at least one EDAM ``Topic`` and one EDAM ``Operation``
-to the entry (see below).
+    to the entry (see below).
 
 Tool annotations (EDAM)
 ---------------------
