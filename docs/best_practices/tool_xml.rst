@@ -354,7 +354,7 @@ TODO
 Coding Style
 ------------
 
-* 4 spaces indent
+* Tabs for XML (includes command and help blocks, 4 spaces permitted if consistently used across the XML file including aforementioned command and help blocks).
 * Order of XML elements:
 
   * `description`_
@@ -377,12 +377,12 @@ Coding Style
   * `help`_
   * `citations`_
 
-* Cheetah code should also be indented and mainly `PEP8`_ conformant
+* Cheetah code should also be indented and mainly `PEP8`_ conformant.
 * XML elements should normally have all attributes on a single line for easier
   searchability, but for large XML elements the ``label`` and ``help``
   attributes can be on a new line.
 
-* param names should be readable and understandable, e.g. using the long option name of the wrapped tool
+* param names should be readable and understandable, e.g. using the long option name of the wrapped tool.
 * Order of parameter attributes:
 
   * name

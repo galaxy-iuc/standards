@@ -11,7 +11,7 @@ Before ToolShed
 - A `GitHub <https://github.com/>`__ repository should exist for your wrappers, either one you own, or perhaps you are contributing to the `IUC's repository <https://github.com/galaxyproject/tools-iuc>`__.
 - A tool directory should exist for the specific set of tools or related functionality you are wrapping.
 - Check `Bioconda <https://bioconda.github.io/>`__ for available packages required for the tool you are wrapping. If they do not exist, you may need to create them. The `IUC <https://galaxyproject.org/iuc>`__ will be happy to help you with doing this.
-- `Planemo <http://planemo.readthedocs.io/en/latest/readme.html>`__ should be installed (``pip install -U planemo``)
+- `Planemo <http://planemo.readthedocs.io/en/latest/readme.html>`__ should be installed (``pip install -U planemo``).
 - You will need to have credentials to access your ToolShed (either the `Main
   ToolShed <https://toolshed.g2.bx.psu.edu/>`__, or your local Galactic ToolShed).
 
@@ -20,7 +20,7 @@ Creating the Tool Wrapper (XML File)
 
 - Review the `IUC's Best Practices for Tools <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html>`__.
 - Consult the `Galaxy Tool XML File schema <https://docs.galaxyproject.org/en/master/dev/schema.html>`__.
-- Create your tool wrapper with a command like ``planemo tool_init --id 'tool_name' --name 'Tool description'``. 
+- Create your tool wrapper with a command like ``planemo tool_init --id 'tool_name' --name 'Tool description'``.
 - Alternatively, you could copy and modify `an existing IUC wrapper <https://github.com/galaxyproject/tools-iuc/tree/master/tools>`__.
 - Give your tool an appropriate ``ID`` and ``name`` by consulting the `IUC's Best Practices for Tools <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html>`__. The ``ID`` is usually the same as the name of the tool XML file and directory.
 - Define a `Tool Version <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-versions>`__ for the wrapper. If it is the first wrapper, is recommended to use the same version as the tool in the requirement.
@@ -34,11 +34,11 @@ Creating the Tool Wrapper (XML File)
 - Add a `Help <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#help-tag>`__ section written in `valid reStructuredText <http://rst.ninjs.org>`__ within CDATA tags.
 - Add a `Citation <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-citations>`__ section with a citation for the tool, preferably a `DOI <https://www.doi.org/>`__.
 - If your tool uses `built-in data <https://galaxyproject.org/admin/data-integration>`__:
-    - Provide the comment-only ``tool-data/data_table_name.loc.sample`` file
-    - Provide the comment-only ``tool_data_table_conf.xml.sample`` file
+    - Provide the comment-only ``tool-data/data_table_name.loc.sample`` file.
+    - Provide the comment-only ``tool_data_table_conf.xml.sample`` file.
 - Check that the XML elements and parameters attributes are in the `Order specified in the Best Practices <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#coding-style>`__.
-- If you have a collection of related tools you can try to avoid duplicating XML by using a `Macros XML file <http://planemo.readthedocs.io/en/latest/writing_standalone.html#macros>`__       
-- Use 4 spaces for indentation.
+- If you have a collection of related tools you can try to avoid duplicating XML by using a `Macros XML file <http://planemo.readthedocs.io/en/latest/writing_standalone.html#macros>`__.
+- Use tabs for indentation across the XML file (including command, help sections) (4 space indentation is permitted as long as the author is consistent, using it across the XML file, including command, and help blocks).
 
 Testing Your Tool
 -----------------
