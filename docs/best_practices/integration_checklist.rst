@@ -15,6 +15,13 @@ Before ToolShed
 - You will need to have credentials to access your ToolShed (either the `Main
   ToolShed <https://toolshed.g2.bx.psu.edu/>`__, or your local Galactic ToolShed).
 
+Wrapping tools with subcommands
+-------------------------------
+
+Subcommands can be represented as separate tools or a conditional. Separate tools are preferable
+in particular if the different subcommands need different amounts of resources (because this simplifies
+the allocation of resources for Galaxy admins).
+
 Creating the Tool Wrapper (XML File)
 ------------------------------------
 
