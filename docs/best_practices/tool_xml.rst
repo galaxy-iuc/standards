@@ -8,6 +8,13 @@ someone has already created a wrapper for the same third party
 executable you are looking for. Consider announcing your tool project on
 galaxy-dev to see if anyone has already created a wrapper.
 
+Wrapping tools with subcommands
+-------------------------------
+
+Subcommands can be represented as separate tools or a conditional. Separate tools are preferable
+in particular if the different subcommands need different amounts of resources (because this simplifies
+the allocation of resources for Galaxy admins).
+
 Tool versions
 -------------
 
