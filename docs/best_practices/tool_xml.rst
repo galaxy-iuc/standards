@@ -234,10 +234,6 @@ in the Cheetah ``<command>`` section.
         ...
         <param name=”strict” truevalue=”--enable-strict” falsevalue=””>
 
-Boolean should not be used as a conditional for other options. For dynamic
-options, please use a ``select`` input type as described in the Dynamic Options
-section below.
-
 Dynamic Options
 ---------------
 
