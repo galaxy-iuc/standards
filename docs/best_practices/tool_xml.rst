@@ -98,7 +98,7 @@ quickly apply that to the other available VSearch tools.
 Tool profile
 ------------
 
-Tools should define a recent profile, i.e. a profile not older than 1 year. 
+Tools should define a recent profile, i.e. a profile not older than 1 year.
 
 Tool Descriptions
 -----------------
@@ -188,7 +188,7 @@ not included, is derived from ``argument`` by stripping any leading dashes
 and replacing internal dashes by underscores (the later since release 19.09). This
 derived name can be used inside the ``<command>`` element to refer to the
 parameter value as you would normally do with the ``name`` attribute.
-Note that if the automatically generated name violates the rules for valid Cheetah 
+Note that if the automatically generated name violates the rules for valid Cheetah
 placeholders (i.e. consist of alphanumeric characters or underscore and must not
 start with a digit) you should specify a valid ``name`` attribute for the parameter.
 
@@ -207,6 +207,17 @@ warning messages appear). See `planemo docs <https://planemo.readthedocs.io/en/l
 
 When tools contain output filters, tests should be included that verify
 this filtering occurs. See `planemo docs <https://planemo.readthedocs.io/en/latest/writing_how_do_i.html#test-output-filters-work>`__ for more information.
+
+Test data guidelines:
+
+* Test data should be as small as possible while still being representative.
+* Consider using subsets or downsampled versions of real datasets.
+* If larger test files are unavoidable, they should be deposited in
+  the `Galaxy Tool Developers <https://zenodo.org/communities/galaxy_tool_dev_sig>`__
+  Zenodo community rather than uploaded directly to
+  GitHub or stored in private Zenodo repositories.
+
+To upload test data to the Zenodo community:
 
 Data parameters
 ---------------
