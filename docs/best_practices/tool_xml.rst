@@ -232,7 +232,7 @@ To upload test data to the Zenodo community:
 If you already have a record on Zenodo and want to add it to the "Galaxy Tool Developer" community:
 
 - Go to your record page on Zenodo.
-- Scroll down until you find "" on the right side of the page.
+- Scroll down until you find "Communities" on the right side of the page.
 - Click on the gear icon.
 - Click on "Submit to Community".
 - Look for "Galaxy Tool Developers", using the search bar. Click on "Select."
