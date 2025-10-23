@@ -212,7 +212,7 @@ Test data guidelines:
 
 * Test data should be as small as possible while still being representative.
 * Consider using subsets or downsampled versions of real datasets.
-* If larger test files are unavoidable, they should be deposited in
+* If test files are over 1MB in size, they should be deposited in
   the `Galaxy Tool Developers <https://zenodo.org/communities/galaxy_tool_dev_sig>`__
   Zenodo community rather than uploaded directly to
   GitHub or stored in private Zenodo repositories.
