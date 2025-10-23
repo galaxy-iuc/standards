@@ -239,6 +239,15 @@ If you already have a record on Zenodo and want to add it to the "Galaxy Tool De
 - You have to accept "The 'Galaxy Tool Developers' curators will have access to **view and edit** your upload's metadata and files." for a successful submission.
 - A reviewer from this community, will review your request and reply soon. They maybe ask you to enrich your dataset submission with more metadata or details. This process may takes a few days.
 
+To use the test data in your tool wrapper, you can use the following syntax:
+
+```
+    <test>
+        <param name="input_file" location="https://zenodo.org/records/RECORD/files/FILE_NAME"/>
+        ...
+    </test>
+```
+
 Data parameters
 ---------------
 
