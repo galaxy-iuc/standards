@@ -58,13 +58,6 @@ Tools and Tool Development
     best_practices/tool_xml
     best_practices/integration_checklist
 
-Packages
---------
-
-.. toctree::
-
-    best_practices/package_xml
-
 
 Repository Layout
 -----------------
