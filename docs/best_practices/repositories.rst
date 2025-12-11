@@ -9,12 +9,16 @@ repositories in a structure similar to the following:
     tools-iuc/
     ├── data_managers
     │   └── data_manager_NAME/...
+    ├── deprecated
+    |   ├── data_managers
+    |   ...
+    |   └── tools ...
     ├── LICENSE
-    ├── packages/
-    │   └── package_NAME_VERSION/tool_dependencies.xml
     ├── README.rst
     ├── suites/
     │   └── suite_name/...
+    ├── tool_collections/
+    │   └── NAME/...
     └── tools/
         └── NAME
             ├── macros.xml
@@ -25,7 +29,7 @@ repositories in a structure similar to the following:
             └── tool_dependencies.xml
 
 The highest level directory contains only a few folders for the major types of
-Galaxy repositories; tools, packages, data managers, and sometimes visualizations and datatypes.
+Galaxy repositories: Primariliy this is tools and data managers. 
 
 ToolShed Repositories
 ---------------------
@@ -44,12 +48,6 @@ The Tool Shed recognizes many more types of README files than this - but these
 are not encouraged and may be deprecated in the future. Markdown_ is not
 supported by the Tool Shed at this time and so ``README.md`` are not
 recognized at all.
-
-Package Repositories
---------------------
-
-These may only contain a ``tool_dependencies.xml`` file
-
 
 Suites
 ------
