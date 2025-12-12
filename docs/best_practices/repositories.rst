@@ -29,7 +29,7 @@ repositories in a structure similar to the following:
             └── tool_dependencies.xml
 
 The highest level directory contains only a few folders for the major types of
-Galaxy repositories: Primariliy this is tools and data managers. 
+Galaxy repositories, primarily tools and data managers. 
 
 ToolShed Repositories
 ---------------------
