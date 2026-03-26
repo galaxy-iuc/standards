@@ -239,10 +239,11 @@ If you already have a record on Zenodo and want to add it to the "Galaxy Tool De
 - You have to accept "The 'Galaxy Tool Developers' curators will have access to **view and edit** your upload's metadata and files." for a successful submission.
 - A reviewer from this community, will review your request and reply soon. They maybe ask you to enrich your dataset submission with more metadata or details. This process may takes a few days.
 
-Please make note:
+Please note:
 
-* Zenodo defaults license to CC BY 4.0; verify or change the licence at upload. If your
-file derives from another dataset, keep the original licence and note provenance.
+* Zenodo defaults to the CC BY 4.0 license for new uploads; please verify or change the license if required. 
+
+   In particular, if your file derives from another dataset, keep the original license and note provenance.
 * Add concise keywords/subjects (community, format, domain, tool) for discoverability.
 
 
