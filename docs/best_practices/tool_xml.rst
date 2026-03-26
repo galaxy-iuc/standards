@@ -227,7 +227,7 @@ To upload test data to the Zenodo community:
 - Upload your file(s).
 - Get a DOI for your upload.
 - Fill as much information and metadata as possible for your dataset.
-- A reviewer from this community, will review your request and reply soon. They maybe ask you to enrich your dataset submission with more metadata or details. This process may takes a few days.
+- A reviewer from this community will review your request and reply soon. They may ask you to enrich your dataset submission with more metadata or details.
 
 If you already have a record on Zenodo and want to add it to the "Galaxy Tool Developer" community:
 
