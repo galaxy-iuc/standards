@@ -217,34 +217,7 @@ Test data guidelines:
   Zenodo community rather than uploaded directly to
   GitHub or stored in private Zenodo repositories.
 
-To upload test data to the Zenodo community:
-
-- Login to your account on Zenodo.
-- Click on "New Upload".
-- On top of the page, click on "Select a Community".
-- Look for "Galaxy Tool Developers", using the search bar. Click on "Select."
-- You have to accept "The 'Galaxy Tool Developers' curators will have access to **view and edit** your upload's metadata and files." for a successful submission.
-- Upload your file(s).
-- Get a DOI for your upload.
-- Fill as much information and metadata as possible for your dataset.
-- A reviewer from this community will review your request and reply soon. They may ask you to enrich your dataset submission with more metadata or details.
-
-If you already have a record on Zenodo and want to add it to the "Galaxy Tool Developer" community:
-
-- Go to your record page on Zenodo.
-- Scroll down until you find "Communities" on the right side of the page.
-- Click on the gear icon.
-- Click on "Submit to Community".
-- Look for "Galaxy Tool Developers", using the search bar. Click on "Select."
-- You have to accept "The 'Galaxy Tool Developers' curators will have access to **view and edit** your upload's metadata and files." for a successful submission.
-- A reviewer from this community, will review your request and reply soon. They maybe ask you to enrich your dataset submission with more metadata or details. This process may takes a few days.
-
-Please note:
-
-* Zenodo defaults to the CC BY 4.0 license for new uploads; please verify or change the license if required. 
-
-   In particular, if your file derives from another dataset, keep the original license and note provenance.
-* Add concise keywords/subjects (community, format, domain, tool) for discoverability.
+Read more about data upload to the Galaxy Tool Developers Zenodo community, `here <https://zenodo.org/communities/galaxy_tool_dev_sig/about>`__.
 
 
 To use the test data in your tool wrapper, you can use the following syntax:
