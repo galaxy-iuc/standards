@@ -98,7 +98,10 @@ quickly apply that to the other available VSearch tools.
 Tool profile
 ------------
 
-Tools should define a recent profile, i.e. a profile not older than 1 year.
+Tools should define a recent profile, i.e. a profile going back about 1 year
+from the latest stable release, unless a new Galaxy feature is required for
+the tool to run successfully. A list of profile changes is maintained in the
+`Galaxy schema docs <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-profile>`__.
 
 Tool Descriptions
 -----------------
