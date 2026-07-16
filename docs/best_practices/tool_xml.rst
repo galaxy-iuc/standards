@@ -191,7 +191,7 @@ not included, is derived from ``argument`` by stripping any leading dashes
 and replacing internal dashes by underscores (the later since release 19.09). This
 derived name can be used inside the ``<command>`` element to refer to the
 parameter value as you would normally do with the ``name`` attribute.
-Note that if the automatically generated name violates the rules for valid Cheetah 
+Note that if the automatically generated name violates the rules for valid Cheetah
 placeholders (i.e. consist of alphanumeric characters or underscore and must not
 start with a digit) you should specify a valid ``name`` attribute for the parameter.
 
@@ -210,6 +210,27 @@ warning messages appear). See `planemo docs <https://planemo.readthedocs.io/en/l
 
 When tools contain output filters, tests should be included that verify
 this filtering occurs. See `planemo docs <https://planemo.readthedocs.io/en/latest/writing_how_do_i.html#test-output-filters-work>`__ for more information.
+
+Test data guidelines:
+
+* Test data should be as small as possible while still being representative.
+* Consider using subsets or downsampled versions of real datasets.
+* If test files are over 1MB in size, they should be deposited in
+  the `Galaxy Tool Developers <https://zenodo.org/communities/galaxy_tool_dev_sig>`__
+  Zenodo community rather than uploaded directly to
+  GitHub or stored in private Zenodo repositories.
+
+Read more about data upload to the Galaxy Tool Developers Zenodo community, `here <https://zenodo.org/communities/galaxy_tool_dev_sig/about>`__.
+
+
+To use the test data in your tool wrapper, you can use the following syntax:
+
+```
+    <test>
+        <param name="input_file" location="https://zenodo.org/records/RECORD/files/FILE_NAME"/>
+        ...
+    </test>
+```
 
 Data parameters
 ---------------
