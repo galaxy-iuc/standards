@@ -119,7 +119,7 @@ In the above examples the tool name is rendered in fixed width text, and the
 rest is the tool description.
 
 Tool cross-references (bio.tools)
----------------------
+---------------------------------
 
 It is important to cross-link Galaxy tools to best practice metadata in registries and
 catalogs such as `bio.tools <https://bio.tools/>`__.
@@ -131,7 +131,9 @@ You can link a Galaxy tool to its bio.tools entry by adding a ``xref`` snippet
 to the tool wrapper: i.e. modifying the ``*.xml`` file. Below is an example ``xml`` for
 `Racon <https://github.com/bgruening/galaxytools/tree/1570f3a28232b4b88385cdfbb68f79d80ff1dabb/tools/racon>`__
 
-.. code:: xml
+.. code-block:: xml
+    :force:
+
     <macros>
         <import>macros.xml</import>
     </macros>
@@ -152,7 +154,7 @@ If a bio.tools entry does not exist, you should add an entry as follows:
     to the entry (see below).
 
 Tool annotations (EDAM)
----------------------
+-----------------------
 
 The bio.tools registry makes use of the `EDAM`_ ontology
 to annotate tools with ``Data``, ``Format``, ``Operation`` and ``Topic`` terms.
@@ -225,12 +227,12 @@ Read more about data upload to the Galaxy Tool Developers Zenodo community, `her
 
 To use the test data in your tool wrapper, you can use the following syntax:
 
-```
+.. code-block:: xml
+
     <test>
         <param name="input_file" location="https://zenodo.org/records/RECORD/files/FILE_NAME"/>
         ...
     </test>
-```
 
 Data parameters
 ---------------
