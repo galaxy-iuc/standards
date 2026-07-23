@@ -1,4 +1,4 @@
-Github Repositories
+GitHub Repositories
 ===================
 
 Most tool developers are on GitHub, and have chosen to lay out their
@@ -25,12 +25,12 @@ repositories in a structure similar to the following:
             └── tool_dependencies.xml
 
 The highest level directory contains only a few folders for the major types of
-Galaxy repositories; tools, packages, data managers, and sometimes visualizations and datatypes.
+Galaxy repositories: tools, packages, data managers, and sometimes visualizations and datatypes.
 
 ToolShed Repositories
 ---------------------
 
-A Github repository may correspond to any number of published ToolShed
+A GitHub repository may correspond to any number of published ToolShed
 repositories.
 
 Every unrestricted tool shed repository should contain a README_ file -
