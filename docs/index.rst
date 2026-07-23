@@ -23,11 +23,11 @@ their own tool repositories.
 
         A step-by-step checklist for getting a tool ready for the Tool Shed.
 
-    .. grid-item-card:: Packages
+    .. grid-item-card:: Tool Dependencies
         :link: best_practices/package_xml
         :link-type: doc
 
-        Conventions for tool dependency packages.
+        Declaring dependencies with Conda, Bioconda, and containers.
 
     .. grid-item-card:: Repository Layout
         :link: best_practices/repositories

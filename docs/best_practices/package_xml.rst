@@ -1,40 +1,55 @@
-Packages
-========
+Packages / Tool Dependencies
+============================
 
-Before you start writing a new tool please search the `Main Tool Shed
-(MTS) <https://toolshed.g2.bx.psu.edu>`__ and the `Test Tool Shed
-(TTS) <https://testtoolshed.g2.bx.psu.edu>`__ because it's possible that
-someone has already created an installer for the same third party
-executable you are looking for. Consider announcing your packaging project on
-galaxy-dev to see if anyone has already created a wrapper.
+Galaxy tools declare their dependencies with ``<requirement>`` elements that
+Galaxy resolves at runtime. The community standard is `Conda
+<https://docs.conda.io/>`__ packages from the `Bioconda
+<https://bioconda.github.io/>`__ and `conda-forge <https://conda-forge.org/>`__
+channels, with `BioContainers <https://biocontainers.pro/>`__ providing matching
+containers automatically.
 
-Packaging software is something of a more advanced topic, and due to the
-complexities of the syntax, somewhat harder to validate.
+.. note::
 
+   The older Tool Shed *tool dependency packages* (``package_*`` repositories
+   containing ``tool_dependencies.xml`` with ``<action type="download_by_url">``
+   directives) are **deprecated** and should not be used for new tools. Declare
+   Conda requirements instead.
 
-Downloads
----------
+Declaring requirements
+----------------------
 
-Packages generally must download one or more files from the internet in order
-to function. We require checksums on all of our package downloads for multiple reasons:
+Reference a Bioconda/conda-forge package by name and version, e.g.
 
--  Download integrity.
--  Insecure transport methods, like ``http://`` and ``ftp://``
--  The packages come from the untrusted internet, we don't know if anyone has
-   modified the software in transit. This software is installed directly to
-   large university clusters. We must make an effort to ensure that what is
-   being installed is what the user actually asked for, and not a version of
-   ``bowtie`` that has been modified unexpectedly.
+.. code-block:: xml
 
-The checksums take the form of sha256sums attached as attributes to
-``<action type="download_by_url">`` and other elements, e.g.
+    <requirements>
+        <requirement type="package" version="1.2.36">aragorn</requirement>
+    </requirements>
 
-.. code:: xml
+Pin the version with a ``@TOOL_VERSION@`` macro token and reuse it in the
+``<requirement>`` as described in :doc:`tool_xml`.
 
-    <action type="download_by_url" sha256sum="ab060325...">
-         http://mbio-serv2.mbioekol.lu.se/ARAGORN/Downloads/aragorn1.2.36.tgz
-    </action>
+If a package does not yet exist
+-------------------------------
 
-This XML snippet will cause the file ``aragorn1.2.36.tgz`` to be downloaded,
-and to be validated. If the sha256sums match, then the package installs.
-Otherwise, it fails immediately.
+Search `Bioconda <https://bioconda.github.io/>`__ and `conda-forge
+<https://conda-forge.org/>`__ first -- someone may already have packaged your
+dependency. If not, create a recipe: the Conda recipe (``meta.yaml``) carries
+the download URL and a ``sha256`` checksum, so installs are integrity-checked
+and reproducible. Consider announcing your packaging effort on ``galaxy-dev`` so
+others can help or avoid duplicating work.
+
+Learn more
+----------
+
+The Galaxy Training Network covers modern dependency management in depth:
+
+- `Tool Dependencies and Conda
+  <https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda/slides.html>`__
+  -- connecting tools to Conda/Bioconda packages
+- `Prerequisites for building software / Conda packages
+  <https://training.galaxyproject.org/training-material/topics/dev/tutorials/conda_sys/slides.html>`__
+  -- compiling and packaging software from source
+- `Tool Dependencies and Containers
+  <https://training.galaxyproject.org/training-material/topics/dev/tutorials/containers/slides.html>`__
+  -- BioContainers and automatic container resolution
