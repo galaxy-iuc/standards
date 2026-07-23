@@ -16,7 +16,7 @@ maintaining automatically installing reproducible Galaxy tools.
 Definitions
 -----------
 
-Follows a short summary of the key parts when it comes to Galaxy Tools.
+What follows is a short summary of the key parts when it comes to Galaxy Tools.
 
 -  `ToolShed <https://wiki.galaxyproject.org/ToolShed>`__, The Galaxy
    AppStore - companion Galaxy web server for tools. E.g.

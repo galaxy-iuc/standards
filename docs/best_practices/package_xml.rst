@@ -16,7 +16,7 @@ Downloads
 ---------
 
 Packages generally must download one or more files from the internet in order
-to function. We require checksums on all of our package downloads from multiple reasons:
+to function. We require checksums on all of our package downloads for multiple reasons:
 
 -  Download integrity.
 -  Insecure transport methods, like ``http://`` and ``ftp://``

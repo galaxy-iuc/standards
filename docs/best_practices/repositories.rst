@@ -77,7 +77,7 @@ automatically created for those sets of tools by Planemo_.
 Tools
 -----
 
-Tool often contain:
+Tools often contain:
 
 * Tool XML files
 * ``macros.xml`` file for use in keeping tools DRY

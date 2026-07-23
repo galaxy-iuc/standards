@@ -9,7 +9,7 @@ toolshed repositories.
     
     name: package_aragorn_1_2_36
     owner: iuc
-    description: Contains a tool dependency definition that downloads and extract version
+    description: Contains a tool dependency definition that downloads and extracts version
       1.2.36 of Aragorn.
     homepage_url: http://mbio-serv2.mbioekol.lu.se/ARAGORN/
     long_description: |
@@ -33,7 +33,7 @@ toolshed repositories.
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | homepage_url          | This value is currently under debate, but we recommend reading over `#1 <https://github.com/galaxy-iuc/standards/issues/1>`__.                                                             |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| long_description      | A longer README type description of the package, as tool dependencies do no currently support README files.                                                                                |
+| long_description      | A longer README type description of the package, as tool dependencies do not currently support README files.                                                                               |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | remote_repository_url | This should be the path to the folder in your github repository, on the branch you create releases from (usually master). This will eventually be used with the toolshed for update hooks. |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -83,7 +83,7 @@ Thus a number of advanced parameters were added for helping developers manage su
 This example assumes the ``.shed.yml`` file is placed in a "flat" directory with each samtools tool
 wrapper. Planemo will create and update repositories for each individual tool given the specified
 templates in auto_tool_repositories. The suite key here will auto-generate a suite repository for
-all of these tools and will automatically created the corresponding repository_dependencies.xml to
+all of these tools and will automatically create the corresponding repository_dependencies.xml to
 populate it with (this is generated during shed_upload and never needs to exist in your repository).
 
 Again this example is admittedly idealized, but if ``auto_tool_repositories`` is
@@ -98,7 +98,7 @@ examples of this in the planemo's test data:
 The test data also includes some more advanced usages of the suite key as well - specifically using
 it without `auto_tool_repositories <https://github.com/galaxyproject/planemo/blob/master/tests/data/repos/suite_auto/.shed.yml>`__ 
 as a generic replacement for repository_dependencies.xml and adding `additional dependent
-repositories <https://github.com/galaxyproejct/planemo/blob/master/tests/data/repos/multi_repos_flat_flag_suite/.shed.yml>`__
+repositories <https://github.com/galaxyproject/planemo/blob/master/tests/data/repos/multi_repos_flat_flag_suite/.shed.yml>`__
 in addition to the ones defined by the .shed.yml file.
 
 

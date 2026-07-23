@@ -23,7 +23,7 @@ Creating the Tool Wrapper (XML File)
 - Create your tool wrapper with a command like ``planemo tool_init --id 'tool_name' --name 'Tool description'``. 
 - Alternatively, you could copy and modify `an existing IUC wrapper <https://github.com/galaxyproject/tools-iuc/tree/master/tools>`__.
 - Give your tool an appropriate ``ID`` and ``name`` by consulting the `IUC's Best Practices for Tools <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html>`__. The ``ID`` is usually the same as the name of the tool XML file and directory.
-- Define a `Tool Version <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-versions>`__ for the wrapper. If it is the first wrapper, is recommended to use the same version as the tool in the requirement.
+- Define a `Tool Version <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-versions>`__ for the wrapper. If it is the first wrapper, it is recommended to use the same version as the tool in the requirement.
 - Add a short tool `Description <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-descriptions>`__.
 - Fill in the `Requirements <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements>`__ section with the conda package name and version number for the tool and its dependencies.
 - Add the `Version Command <https://docs.galaxyproject.org/en/master/dev/schema.html#tool-version-command>`__ that specifies the command to get the tool’s version.
@@ -78,7 +78,7 @@ Adding Your Tool to the IUC Repository
   previous sections of this document), add your tool and all associated data,
   then Commit the changes with ``git commit -m "I changed X, Y, and Z"``. Finally push your changes to github with ``git push origin $branch_name``.
 - Go to the `IUC's Repository <https://github.com/galaxyproject/tools-iuc>`__ and click on 'Compare & Pull Request'.
-- Add a comment describing what the tool and any extra information that might
+- Add a comment describing what the tool does and any extra information that might
   be needed (E.g. "I had some trouble with the data tables, can someone please
   double check them").
 - The IUC will review your tool for inclusion.

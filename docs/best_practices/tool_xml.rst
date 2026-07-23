@@ -56,7 +56,7 @@ value can be used, as long as it respects the PEP 440 specification.
 
 For tools whose wrapper version is (for historical reasons) already greater than
 the version of the underlying tool, only the minor version number shall be
-increased if this is likely to bring the two version in sync in a reasonable
+increased if this is likely to bring the two versions in sync in a reasonable
 time.
 
 Tool ids
@@ -176,7 +176,9 @@ When picking EDAM terms, avoid "root terms" such as ``Topic`` and ``Operation``,
 most specific terms available. If you feel like the terms required to describe the tool are
 missing, do not hesitate to `ask for new terms <https://edamontologydocs.readthedocs.io/en/latest/getting_involved.html#suggestions-requests>`__.
 
-More detailed guidelines to pick EDAM terms are also available in the [bio.tools curators guide](https://biotools.readthedocs.io/en/latest/curators_guide.html#edamannotations) and the [EDAM ontology users guide](https://edamontologydocs.readthedocs.io/en/latest/users_guide.html#picking-concepts).
+More detailed guidelines to pick EDAM terms are also available in the
+`bio.tools curators guide <https://biotools.readthedocs.io/en/latest/curators_guide.html#edamannotations>`__
+and the `EDAM ontology users guide <https://edamontologydocs.readthedocs.io/en/latest/users_guide.html#picking-concepts>`__.
 
 Parameter name, argument and help
 ---------------------------------
@@ -190,7 +192,7 @@ easier if the user is talking to non-Galaxy developers.
 
 When ``argument`` is specified, the ``name`` attribute becomes optional and, if
 not included, is derived from ``argument`` by stripping any leading dashes
-and replacing internal dashes by underscores (the later since release 19.09). This
+and replacing internal dashes by underscores (the latter since release 19.09). This
 derived name can be used inside the ``<command>`` element to refer to the
 parameter value as you would normally do with the ``name`` attribute.
 Note that if the automatically generated name violates the rules for valid Cheetah
@@ -258,7 +260,7 @@ in the Cheetah ``<command>`` section.
     </command>
     <inputs>
         ...
-        <param name=”strict” truevalue=”--enable-strict” falsevalue=””>
+        <param name="strict" truevalue="--enable-strict" falsevalue="">
 
 Boolean should not be used as a conditional for other options. For dynamic
 options, please use a ``select`` input type as described in the Dynamic Options
