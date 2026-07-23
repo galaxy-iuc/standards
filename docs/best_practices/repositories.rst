@@ -22,7 +22,7 @@ repositories in a structure similar to the following:
             └── test-data/
 
 The highest level directory contains only a few folders for the major types of
-Galaxy repositories: tools, packages, data managers, and sometimes visualizations and datatypes.
+Galaxy repositories: tools, suites, and data managers.
 
 ToolShed Repositories
 ---------------------
