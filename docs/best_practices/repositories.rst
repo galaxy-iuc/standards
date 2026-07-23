@@ -10,8 +10,6 @@ repositories in a structure similar to the following:
     ├── data_managers
     │   └── data_manager_NAME/...
     ├── LICENSE
-    ├── packages/
-    │   └── package_NAME_VERSION/tool_dependencies.xml
     ├── README.rst
     ├── suites/
     │   └── suite_name/...
@@ -21,8 +19,7 @@ repositories in a structure similar to the following:
             ├── my_tool.xml
             ├── CHANGELOG.md
             ├── other_tool.xml
-            ├── test-data/
-            └── tool_dependencies.xml
+            └── test-data/
 
 The highest level directory contains only a few folders for the major types of
 Galaxy repositories: tools, packages, data managers, and sometimes visualizations and datatypes.
@@ -44,12 +41,6 @@ The Tool Shed recognizes many more types of README files than this - but these
 are not encouraged and may be deprecated in the future. Markdown_ is not
 supported by the Tool Shed at this time and so ``README.md`` are not
 recognized at all.
-
-Package Repositories
---------------------
-
-These may only contain a ``tool_dependencies.xml`` file
-
 
 Suites
 ------
@@ -83,7 +74,6 @@ Tools often contain:
 * ``macros.xml`` file for use in keeping tools DRY
 * ``test-data/`` directory, because all tools need test data
 * ``tool-data/`` directory, for things like ``*.loc`` files
-* ``tool_dependencies.xml`` file for specifying associated packages
 * ``CHANGELOG.md`` file for tracking the history of features over time in your tool
 
 .. _README: http://en.wikipedia.org/wiki/README
