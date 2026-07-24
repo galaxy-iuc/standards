@@ -1,4 +1,4 @@
-Packages / Tool Dependencies
+Tool Dependencies
 ============================
 
 Galaxy tools declare their dependencies with ``<requirement>`` elements that
