@@ -60,6 +60,8 @@ Galaxy Ecosystem
 - `Galaxy Project <https://galaxyproject.org>`__ -- open-source platform for data-intensive research
 - `IUC <https://galaxyproject.org/iuc>`__ -- Intergalactic Utilities Commission, curated community tools
 - `Planemo <https://planemo.readthedocs.io>`__ -- CLI for Galaxy tool and workflow development
+- `Galaxy Tools for Visual Studio Code <https://marketplace.visualstudio.com/items?itemName=davelopez.galaxy-tools>`__
+  -- Galaxy Language Server-powered completion, validation, linting, and more for tool wrappers
 - `Galaxy Training Network <https://training.galaxyproject.org>`__ -- tutorials and training materials
 
 Indices and tables

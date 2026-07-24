@@ -36,11 +36,16 @@ Search `Bioconda <https://bioconda.github.io/>`__ and `conda-forge
 <https://conda-forge.org/>`__ first -- someone may already have packaged your
 dependency. If not, create a recipe: the Conda recipe (``meta.yaml``) carries
 the download URL and a ``sha256`` checksum, so installs are integrity-checked
-and reproducible. Consider announcing your packaging effort on ``galaxy-dev`` so
+and reproducible. Consider announcing your packaging effort on the
+`tools-iuc Matrix channel <https://matrix.to/#/#galaxy-iuc_iuc:gitter.im>`__ so
 others can help or avoid duplicating work.
 
 Learn more
 ----------
+
+The `Planemo paper <https://doi.org/10.1101/gr.276963.122>`__, particularly its
+automation pipeline in Figure 2, illustrates how new upstream releases flow
+through Conda packages and containers into updated Galaxy tools and workflows.
 
 The Galaxy Training Network covers modern dependency management in depth:
 

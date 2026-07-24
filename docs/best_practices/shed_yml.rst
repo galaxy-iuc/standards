@@ -33,7 +33,7 @@ toolshed repositories.
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | homepage_url          | This value is currently under debate, but we recommend reading over `#1 <https://github.com/galaxy-iuc/standards/issues/1>`__.                                                             |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-| long_description      | A longer README type description of the package, as tool dependencies do not currently support README files.                                                                               |
+| long_description      | A longer README type description of the tool.                                                                                                                                              |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 | remote_repository_url | This should be the path to the folder in your github repository, on the branch you create releases from (usually master). This will eventually be used with the toolshed for update hooks. |
 +-----------------------+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
