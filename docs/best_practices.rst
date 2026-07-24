@@ -16,7 +16,7 @@ maintaining automatically installing reproducible Galaxy tools.
 Definitions
 -----------
 
-Follows a short summary of the key parts when it comes to Galaxy Tools.
+What follows is a short summary of the key parts when it comes to Galaxy Tools.
 
 -  `ToolShed <https://wiki.galaxyproject.org/ToolShed>`__, The Galaxy
    AppStore - companion Galaxy web server for tools. E.g.
@@ -29,18 +29,6 @@ Follows a short summary of the key parts when it comes to Galaxy Tools.
    shareable tool shed repository, supporting automated Galaxy
    installation with revision/version specific control of dependency
    binaries for reproducible analyses.
--  Tool Dependency Package - Tool Shed tools in the Tool Dependency
-   Packages category whose names start with ``package_`` such as
-   ``package_samtools_1_0_0``, automate the installation of a specific
-   version of some command line application software that other tools
-   depend on. Each dependency package may be shared by many tools and
-   are only available to users through tool forms that populate command
-   lines and execute them.
--  Datatypes - Galaxy has a flexible and extensible internal
-   representation for specialised data formats such as fasta sequences,
-   fastq short read data or tabular text persisted in Galaxy histories.
-   Tools and packages can extend Galaxy by installing new datatypes when
-   needed.
 -  DataManagers - Large scale scientific analyses often involve local
    copies of canonical reference data such as reference genomes and
    application specific index files for annotation and mapping in

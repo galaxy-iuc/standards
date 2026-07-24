@@ -56,7 +56,7 @@ value can be used, as long as it respects the PEP 440 specification.
 
 For tools whose wrapper version is (for historical reasons) already greater than
 the version of the underlying tool, only the minor version number shall be
-increased if this is likely to bring the two version in sync in a reasonable
+increased if this is likely to bring the two versions in sync in a reasonable
 time.
 
 Tool ids
@@ -119,7 +119,7 @@ In the above examples the tool name is rendered in fixed width text, and the
 rest is the tool description.
 
 Tool cross-references (bio.tools)
----------------------
+---------------------------------
 
 It is important to cross-link Galaxy tools to best practice metadata in registries and
 catalogs such as `bio.tools <https://bio.tools/>`__.
@@ -131,7 +131,9 @@ You can link a Galaxy tool to its bio.tools entry by adding a ``xref`` snippet
 to the tool wrapper: i.e. modifying the ``*.xml`` file. Below is an example ``xml`` for
 `Racon <https://github.com/bgruening/galaxytools/tree/1570f3a28232b4b88385cdfbb68f79d80ff1dabb/tools/racon>`__
 
-.. code:: xml
+.. code-block:: xml
+    :force:
+
     <macros>
         <import>macros.xml</import>
     </macros>
@@ -152,7 +154,7 @@ If a bio.tools entry does not exist, you should add an entry as follows:
     to the entry (see below).
 
 Tool annotations (EDAM)
----------------------
+-----------------------
 
 The bio.tools registry makes use of the `EDAM`_ ontology
 to annotate tools with ``Data``, ``Format``, ``Operation`` and ``Topic`` terms.
@@ -174,7 +176,9 @@ When picking EDAM terms, avoid "root terms" such as ``Topic`` and ``Operation``,
 most specific terms available. If you feel like the terms required to describe the tool are
 missing, do not hesitate to `ask for new terms <https://edamontologydocs.readthedocs.io/en/latest/getting_involved.html#suggestions-requests>`__.
 
-More detailed guidelines to pick EDAM terms are also available in the [bio.tools curators guide](https://biotools.readthedocs.io/en/latest/curators_guide.html#edamannotations) and the [EDAM ontology users guide](https://edamontologydocs.readthedocs.io/en/latest/users_guide.html#picking-concepts).
+More detailed guidelines to pick EDAM terms are also available in the
+`bio.tools curators guide <https://biotools.readthedocs.io/en/latest/curators_guide.html#edamannotations>`__
+and the `EDAM ontology users guide <https://edamontologydocs.readthedocs.io/en/latest/users_guide.html#picking-concepts>`__.
 
 Parameter name, argument and help
 ---------------------------------
@@ -188,7 +192,7 @@ easier if the user is talking to non-Galaxy developers.
 
 When ``argument`` is specified, the ``name`` attribute becomes optional and, if
 not included, is derived from ``argument`` by stripping any leading dashes
-and replacing internal dashes by underscores (the later since release 19.09). This
+and replacing internal dashes by underscores (the latter since release 19.09). This
 derived name can be used inside the ``<command>`` element to refer to the
 parameter value as you would normally do with the ``name`` attribute.
 Note that if the automatically generated name violates the rules for valid Cheetah
@@ -225,12 +229,12 @@ Read more about data upload to the Galaxy Tool Developers Zenodo community, `her
 
 To use the test data in your tool wrapper, you can use the following syntax:
 
-```
+.. code-block:: xml
+
     <test>
         <param name="input_file" location="https://zenodo.org/records/RECORD/files/FILE_NAME"/>
         ...
     </test>
-```
 
 Data parameters
 ---------------
@@ -256,7 +260,7 @@ in the Cheetah ``<command>`` section.
     </command>
     <inputs>
         ...
-        <param name=”strict” truevalue=”--enable-strict” falsevalue=””>
+        <param name="strict" truevalue="--enable-strict" falsevalue="">
 
 Boolean should not be used as a conditional for other options. For dynamic
 options, please use a ``select`` input type as described in the Dynamic Options
