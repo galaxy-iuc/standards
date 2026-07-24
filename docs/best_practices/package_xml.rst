@@ -1,5 +1,5 @@
 Tool Dependencies
-============================
+=================
 
 Galaxy tools declare their dependencies with ``<requirement>`` elements that
 Galaxy resolves at runtime. The community standard is `Conda
