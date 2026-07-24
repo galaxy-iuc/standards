@@ -8,13 +8,6 @@ Galaxy resolves at runtime. The community standard is `Conda
 channels, with `BioContainers <https://biocontainers.pro/>`__ providing matching
 containers automatically.
 
-.. note::
-
-   The older Tool Shed *tool dependency packages* (``package_*`` repositories
-   containing ``tool_dependencies.xml`` with ``<action type="download_by_url">``
-   directives) are **deprecated** and should not be used for new tools. Declare
-   Conda requirements instead.
-
 Declaring requirements
 ----------------------
 
@@ -58,3 +51,10 @@ The Galaxy Training Network covers modern dependency management in depth:
 - `Tool Dependencies and Containers
   <https://training.galaxyproject.org/training-material/topics/dev/tutorials/containers/slides.html>`__
   -- BioContainers and automatic container resolution
+
+.. note::
+
+   The older Tool Shed *tool dependency packages* (``package_*`` repositories
+   containing ``tool_dependencies.xml`` with ``<action type="download_by_url">``
+   directives) are **deprecated** and should not be used for new tools. Declare
+   Conda requirements instead.
