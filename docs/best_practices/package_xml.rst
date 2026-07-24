@@ -19,8 +19,9 @@ Reference a Bioconda/conda-forge package by name and version, e.g.
         <requirement type="package" version="1.2.36">aragorn</requirement>
     </requirements>
 
-Pin the version with a ``@TOOL_VERSION@`` macro token and reuse it in the
-``<requirement>`` as described in :doc:`tool_xml`.
+If the Galaxy tool is a wrapper for an underlying tool, pin the version with a
+``@TOOL_VERSION@`` macro token and reuse it in the ``<requirement>`` as
+described in :doc:`tool_xml`.
 
 If a package does not yet exist
 -------------------------------
@@ -30,8 +31,9 @@ Search `Bioconda <https://bioconda.github.io/>`__ and `conda-forge
 dependency. If not, create a recipe: the Conda recipe (``meta.yaml``) carries
 the download URL and a ``sha256`` checksum, so installs are integrity-checked
 and reproducible. Consider announcing your packaging effort on the
-`tools-iuc Matrix channel <https://matrix.to/#/#galaxy-iuc_iuc:gitter.im>`__ so
-others can help or avoid duplicating work.
+`Bioconda Matrix channel <https://matrix.to/#/#bioconda_Lobby:gitter.im>`__ so
+others can help or avoid duplicating work. For Galaxy wrapper questions, use the
+`tools-iuc Matrix channel <https://matrix.to/#/#galaxy-iuc_iuc:gitter.im>`__.
 
 Learn more
 ----------
