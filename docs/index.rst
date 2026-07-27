@@ -9,19 +9,43 @@ community, both for contributing back to the
 `IUC repository <https://github.com/galaxyproject/tools-iuc/>`__ and for use in
 their own tool repositories.
 
-.. grid:: 2
+Checklists
+----------
 
-    .. grid-item-card:: Tool XML
-        :link: best_practices/tool_xml
-        :link-type: doc
+Step-by-step lists to work through when preparing a tool.
 
-        Structure, macros, command sections, tests, and help for tool wrappers.
+.. grid:: 1 2 3 3
 
     .. grid-item-card:: Integration Checklist
         :link: best_practices/integration_checklist
         :link-type: doc
 
         A step-by-step checklist for getting a tool ready for the Tool Shed.
+
+    .. grid-item-card:: Tool Security Checklist
+        :link: best_practices/security
+        :link-type: doc
+
+        A security checklist for wrappers, inputs, commands, files, credentials, and downloads.
+
+    .. grid-item-card:: Remote Execution Checklist
+        :link: best_practices/pulsar
+        :link-type: doc
+
+        A checklist for making tools work when jobs run remotely without a shared filesystem.
+
+Documentation
+-------------
+
+Reference guides for the pieces that make up a tool and its repository.
+
+.. grid:: 1 2 3 3
+
+    .. grid-item-card:: Tool XML
+        :link: best_practices/tool_xml
+        :link-type: doc
+
+        Structure, macros, command sections, tests, and help for tool wrappers.
 
     .. grid-item-card:: Tool Dependencies
         :link: best_practices/package_xml

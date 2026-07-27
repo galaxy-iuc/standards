@@ -14,4 +14,4 @@ Automated Management
 
 The IUC has developed GitHub Actions configurations in order to assist in
 continually synchronizing your GitHub repository with the toolshed components.
-You can view these in `.github/workflows in the IUC's GitHub Repo <https://github.com/galaxyproject/tools-iuc/blob/master/.github/workflows>`__
+You can view these in `.github/workflows in the IUC's GitHub Repo <https://github.com/galaxyproject/tools-iuc/blob/main/.github/workflows>`__

@@ -27,6 +27,7 @@ Creating the Tool Wrapper (XML File)
 - Add a short tool `Description <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-descriptions>`__.
 - Fill in the `Requirements <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements>`__ section with the conda package name and version number for the tool and its dependencies.
 - Add the `Version Command <https://docs.galaxyproject.org/en/master/dev/schema.html#tool-version-command>`__ that specifies the command to get the tool’s version.
+- Review the :doc:`Tool Security Checklist <security>` and trace every user-controlled value through Cheetah, the generated command, helper scripts, files, network clients, and rendered outputs.
 - Add the `Command <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#command-tag>`__ section. The command to run the tool must be within `CDATA tags <https://en.wikipedia.org/wiki/CDATA>`__, written in `Cheetah <http://cheetahtemplate.org/>`__ and conform to `PEP 8 <http://pep8.org/>`__. You should add `Exit Code detection <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#exit-code-detection>`__ and **use single quotes** for all Input and Output parameters of type ``data``, ``data_collection`` and ``text``.
 - Supply at least one `Input <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-inputs>`__ with a description of parameters. Add `Validators <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-inputs-param-validator>`__ to user input fields.
 - Supply at least one `Output <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-outputs>`__ with a description of parameters. For Output that is optionally created, use `Filters <https://docs.galaxyproject.org/en/master/dev/schema.html#tool-outputs-data-filter>`__.
@@ -82,4 +83,4 @@ Adding Your Tool to the IUC Repository
   be needed (E.g. "I had some trouble with the data tables, can someone please
   double check them").
 - The IUC will review your tool for inclusion.
-- Note that any Python code submitted to IUC must conform to `PEP 8 <http://pep8.org/>`__, in order to pass the `flake8 <http://flake8.pycqa.org/en/latest/>`__ `Travis CI <https://travis-ci.org/>`__ testing.
+- Note that any Python code submitted to IUC must conform to `PEP 8 <https://pep8.org/>`__, in order to pass the `flake8 <https://flake8.pycqa.org/en/latest/>`__ linting run by the IUC's GitHub Actions CI.
