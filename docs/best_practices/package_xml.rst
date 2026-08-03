@@ -35,6 +35,32 @@ and reproducible. Consider announcing your packaging effort on the
 others can help or avoid duplicating work. For Galaxy wrapper questions, use the
 `tools-iuc Matrix channel <https://matrix.to/#/#galaxy-iuc_iuc:gitter.im>`__.
 
+Multi-requirement containers
+----------------------------
+
+A tool with a single requirement gets its BioContainer automatically. Tools that
+combine *multiple* requirements need a "mulled" container bundling that specific
+combination, and those are not built until the combination has been registered.
+
+The `planemo-monitor <https://github.com/galaxyproject/planemo-monitor>`__
+repository automates that registration on behalf of the community. A scheduled
+GitHub Actions workflow (`monitor.yaml
+<https://github.com/galaxyproject/planemo-monitor/blob/master/.github/workflows/monitor.yaml>`__)
+runs once a day. For every repository it tracks, it runs
+``planemo container_register --recursive`` on it, which walks all of the tools,
+collects each multi-requirement combination, and - for any combination not
+already published or already pending - opens a pull request against
+`BioContainers/multi-package-containers
+<https://github.com/BioContainers/multi-package-containers>`__. Once that pull
+request is merged, the multi-package-containers CI builds the mulled container
+and publishes it to quay.io, from where Galaxy can pull it to execute the tool
+in a container.
+
+To have your own tools covered, add your repository's clone URL to one of the
+``repositories*.list`` files in planemo-monitor via a pull request. From then on
+your multi-requirement tools will have their containers registered and built
+automatically, with no further action required on your part.
+
 Learn more
 ----------
 

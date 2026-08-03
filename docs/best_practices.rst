@@ -46,6 +46,20 @@ Tools and Tool Development
     best_practices/tool_xml
     best_practices/integration_checklist
 
+Tool Security Checklist
+-----------------------
+
+.. toctree::
+
+    best_practices/security
+
+Remote Execution Checklist
+--------------------------
+
+.. toctree::
+
+    best_practices/pulsar
+
 Packages
 --------
 
@@ -74,4 +88,3 @@ Repository Management
 .. toctree::
 
     best_practices/management
-
