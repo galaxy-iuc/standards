@@ -46,6 +46,13 @@ Tools and Tool Development
     best_practices/tool_xml
     best_practices/integration_checklist
 
+Licensing and Use Restrictions
+------------------------------
+
+.. toctree::
+
+    best_practices/licensing
+
 Tool Security Checklist
 -----------------------
 
