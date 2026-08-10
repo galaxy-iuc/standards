@@ -1,14 +1,14 @@
 Licensing and Use Restrictions
 ==============================
 
-Most tools wrapped by the IUC are under permissive or copyleft open source
-licenses and need no special handling. A minority are not: they are free only
-for academic, non-profit, or otherwise non-commercial use, they restrict
-redistribution, or they restrict who may be served by an installed copy.
+The IUC accepts wrappers for software under an OSI-approved license. That rule
+answers the common case, but it does not answer every case, because the
+restricted artifact is frequently not the tool's own code: it is an optional
+dependency, a reference dataset, a model, or a term that binds the organization
+hosting the server rather than the person submitting the job.
 
-The IUC can wrap some such tools, but only when their distribution and
-deployment terms allow it. This page describes what to do while Galaxy lacks a
-first-class mechanism for declaring and enforcing those terms.
+This page is about those situations, and about the small number of wrappers
+whose underlying software carries use restrictions of its own.
 
 .. warning::
 
@@ -19,25 +19,71 @@ first-class mechanism for declaring and enforcing those terms.
 The Checklist
 -------------
 
-#. :ref:`Separate the four licensing layers <licensing-four-licenses>`
-   — the wrapper, the wrapped software, its dependencies, and any reference data or models it uses.
-#. :ref:`Confirm redistribution is permitted before writing the wrapper <licensing-redistribution>`
-   — normally use a Bioconda package and container; otherwise document an administrator-managed installation path.
-#. :ref:`Read the actual terms, not the SPDX identifier <licensing-read-terms>`
-   — some licenses constrain the person submitting the job; some constrain the organization hosting the server. Only the first can be handled in a wrapper.
-#. :ref:`State the restriction in help and metadata <licensing-declare>`
-   — an administrator deciding whether to install a tool should not have to read the ``<command>`` block to discover it is encumbered.
-#. :ref:`Gate the smallest thing that is actually restricted <licensing-scope-the-gate>`
-   — a restricted model, database, or optional analysis should not block the unrestricted parts of a tool.
-#. :ref:`Use the current affirmation pattern, and know what it does not do <licensing-current-pattern>`
-   — it stores ordinary parameter state rather than a first-class acceptance record, and workflow runs need not prompt the executing user.
+#. :ref:`Start from the OSI rule <licensing-osi>`:
+   most restricted cases the IUC actually encounters involve data, models, or
+   dependencies rather than the wrapped tool's own license.
+#. :ref:`Separate the four licensing layers <licensing-four-licenses>`:
+   the wrapper, the wrapped software, its dependencies, and any reference data
+   or models it uses.
+#. :ref:`Confirm redistribution is permitted before writing the wrapper <licensing-redistribution>`:
+   normally use a Bioconda package and container; otherwise document an
+   administrator-managed installation path.
+#. :ref:`Read the actual terms, not the SPDX identifier <licensing-read-terms>`:
+   some licenses constrain the person submitting the job, some constrain the
+   organization hosting the server. Only the first can be handled in a wrapper.
+#. :ref:`State the restriction in help and metadata <licensing-declare>`:
+   an administrator deciding whether to install a tool should not have to read
+   the ``<command>`` block to discover it is encumbered.
+#. :ref:`Gate the smallest thing that is actually restricted <licensing-scope-the-gate>`:
+   a restricted model, database, or optional analysis should not block the
+   unrestricted parts of a tool.
+#. :ref:`Use the current affirmation pattern, and know what it does not do <licensing-current-pattern>`:
+   it stores ordinary parameter state rather than a first-class acceptance
+   record, and workflow runs need not prompt the executing user.
 
 Details
 -------
 
+.. _licensing-osi:
+
+1. Start from the OSI rule
+~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+`CONTRIBUTING.md <https://github.com/galaxyproject/tools-iuc/blob/main/CONTRIBUTING.md>`__
+states that "the tool must be licensed to allow use by anyone" and points at the
+`OSI list <https://opensource.org/licenses>`__; the pull request template asks
+the contributor to confirm that the "[l]icense permits unrestricted use
+(educational + commercial)". The policy was adopted in
+`tools-iuc#2102 <https://github.com/galaxyproject/tools-iuc/pull/2102>`__ in
+October 2018, following
+`tools-iuc#2054 <https://github.com/galaxyproject/tools-iuc/issues/2054>`__,
+which was prompted by the MEME Suite: already wrapped here, distributed through
+Bioconda, and not open source.
+
+So the first question about a restricted tool is whether it belongs in this
+repository at all. Frequently it does not, and no amount of wrapper engineering
+changes that.
+
+Two complications remain despite the rule:
+
+**The encumbered artifact is often not the tool's code.** Clair3, InterProScan,
+Funannotate, GEMINI, and EGSEA all carry OSI-approved licenses and are each
+restricted elsewhere: a basecalling model, separately licensed member analyses,
+a third-party gene predictor, CADD scores, KEGG and MSigDB gene sets. Such
+wrappers satisfy the rule and still need everything on this page.
+
+**A few wrappers predate the rule.** The MEME Suite wrappers, ``meme_chip``,
+``pear``, and ``maker`` were added before October 2018 and are maintained under
+their original terms. ``sfold``, added in 2024, is the only later addition for
+software without an OSI-approved license. Treat it as an exception rather than a
+precedent.
+
+Tool repositories that do not apply this rule may still find the sections below
+useful, though section 3 assumes the Bioconda route the IUC relies on.
+
 .. _licensing-four-licenses:
 
-1. Separate the four licensing layers
+2. Separate the four licensing layers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Do not conflate these independent layers:
@@ -49,7 +95,7 @@ it "covers the tool XML and associated scripts shipped with the tool". It says
 nothing about the wrapped software.
 
 **The wrapped software.** Galaxy currently has **no** tool XML element for its
-license — a long-standing gap tracked in
+license, a long-standing gap tracked in
 `galaxyproject/galaxy#12663 <https://github.com/galaxyproject/galaxy/issues/12663>`__
 and `galaxyproject/galaxy#8006 <https://github.com/galaxyproject/galaxy/issues/8006>`__.
 
@@ -63,7 +109,7 @@ Public License; GEMINI is MIT, but CADD scores are non-commercial only.
 
 .. _licensing-redistribution:
 
-2. Confirm redistribution is permitted before writing the wrapper
+3. Confirm redistribution is permitted before writing the wrapper
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Most IUC tools obtain their dependencies through a Bioconda package and,
@@ -79,7 +125,7 @@ Three outcomes, all of which occur in practice:
 
 **The license permits redistribution with restrictions on use.** This is the
 case the rest of this page addresses. Record the terms and ship the license text
-in the recipe — for example, ``license: Custom`` and ``license_file: COPYING`` for
+in the recipe. For example, ``license: Custom`` and ``license_file: COPYING`` for
 `meme <https://github.com/bioconda/bioconda-recipes/tree/master/recipes/meme>`__,
 and the SPDX identifier ``CC-BY-NC-SA-3.0`` for
 `pear <https://github.com/bioconda/bioconda-recipes/tree/master/recipes/pear>`__.
@@ -108,7 +154,7 @@ patterns have been used:
 
 .. _licensing-read-terms:
 
-3. Read the actual terms, not the SPDX identifier
+4. Read the actual terms, not the SPDX identifier
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 "Non-commercial" is not one restriction. Determine who the terms bind.
@@ -129,7 +175,7 @@ one a wrapper can handle.** Escalate it to the administrator.
 
 .. _licensing-declare:
 
-4. State the restriction in help and metadata
+5. State the restriction in help and metadata
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Make restrictions visible without requiring anyone to inspect ``<command>``:
@@ -153,12 +199,15 @@ Make restrictions visible without requiring anyone to inspect ``<command>``:
 
 .. _licensing-scope-the-gate:
 
-5. Gate the smallest thing that is actually restricted
+6. Gate the smallest thing that is actually restricted
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If the tool is encumbered, gate the tool. If only one input, model, database, or
 optional analysis is encumbered, gate only that path. Over-blocking an
-unrestricted analysis encourages reflexive acceptance.
+unrestricted analysis encourages reflexive acceptance. ``egsea.xml`` shows the
+cost: the software is GPL-3 and the restriction belongs to its optional KEGG and
+MSigDB gene sets, but the certification sits at the top level of ``<inputs>``,
+so every run is gated whether or not those sets are selected.
 
 ``clair3.xml`` is the pattern to copy for the conditional case. The restriction
 applies only when the selected model comes from the Rerio data table, so the
@@ -178,14 +227,14 @@ Note that this cannot be expressed with a ``<validator>``, because the condition
 depends on another parameter's selected data-table row; it has to be a Cheetah
 guard. Its test suite also verifies the expected failure and error message.
 
-Where the restricted component is simply absent from the installation — the
-InterProScan case — a conditional that documents the manual-installation
+Where the restricted component is simply absent from the installation, as in the
+InterProScan case, a conditional that documents the manual-installation
 requirement is preferable to a certification, since there is nothing for the
 user to certify.
 
 .. _licensing-current-pattern:
 
-6. Use the current affirmation pattern, and know what it does not do
+7. Use the current affirmation pattern, and know what it does not do
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Until Galaxy offers a first-class mechanism, use an unchecked boolean with an
