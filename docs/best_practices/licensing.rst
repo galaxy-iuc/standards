@@ -141,16 +141,11 @@ its recipe says ``GPL-3.0-or-later``, its terms limit use, and its author
 silence as permission.
 
 **Redistribution is not permitted.** Then Bioconda cannot ship the software and
-standard automatic installation is unavailable. Two administrator-managed
-patterns have been used:
-
-- **A placeholder package plus a registration script.** Historically,
-  Bioconda's ``gatk`` recipe installed a stub and a ``gatk-register`` command
-  for an administrator-supplied archive. The current recipe no longer uses this
-  arrangement.
-- **An optional path in the wrapper that assumes a manual installation.**
-  ``interproscan.xml`` places its licensed analyses behind a ``<conditional>``
-  that documents the requirement and tests their default deactivated state.
+standard automatic installation is unavailable. The remaining option is an
+optional path in the wrapper that assumes an administrator-managed installation
+and is deactivated by default: ``interproscan.xml`` places its licensed analyses
+behind a ``<conditional>`` that documents the requirement and tests that
+default.
 
 .. _licensing-read-terms:
 
