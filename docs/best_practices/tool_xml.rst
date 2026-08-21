@@ -442,6 +442,7 @@ Coding Style
 .. _edam_topics: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-topics
 .. _edam_operations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-edam-operations
 .. _requirements: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements
+.. _required_files: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-required_files
 .. _stdio: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-stdio
 .. _version_command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-version-command
 .. _command: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-command
@@ -452,6 +453,7 @@ Coding Style
 .. _tests: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-tests
 .. _help: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-help
 .. _citations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-citations
+.. _creator: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-creator
 .. _bedtools: http://bedtools.readthedocs.org/en/latest/content/tools/slop.html
 .. _slop: https://github.com/galaxyproject/tools-iuc/blob/master/tools/bedtools/slopBed.xml
 .. _Galaxy repository: https://github.com/galaxyproject/galaxy
