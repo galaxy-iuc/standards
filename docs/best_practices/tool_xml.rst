@@ -153,8 +153,10 @@ If a bio.tools entry does not exist, you should add an entry as follows:
 -   Ensure that you add at least one EDAM ``Topic`` and one EDAM ``Operation``
     to the entry (see below).
 
-Tool annotations (EDAM)
+Tool annotations
 -----------------------
+EDAM
+^^^^^
 
 The bio.tools registry makes use of the `EDAM`_ ontology
 to annotate tools with ``Data``, ``Format``, ``Operation`` and ``Topic`` terms.
@@ -179,6 +181,22 @@ missing, do not hesitate to `ask for new terms <https://edamontologydocs.readthe
 More detailed guidelines to pick EDAM terms are also available in the
 `bio.tools curators guide <https://biotools.readthedocs.io/en/latest/curators_guide.html#edamannotations>`__
 and the `EDAM ontology users guide <https://edamontologydocs.readthedocs.io/en/latest/users_guide.html#picking-concepts>`__.
+
+Required files
+^^^^^^^^^^^^^^^
+Please, add the files that the Galaxy tool needs to run properly such as 
+ * Running scripts (*.py, *.r, *.sh ...) 
+ * Config files (*.xml, *.sh, ...)
+
+No need to add the macros as they are alredy referenced beforehand. You'll need to referenced the path of those scripts in a include tag and the `path` argument.
+
+Creator
+^^^^^^^^
+A creator should include the person (or people) and/or the organization(s) that wrote down the Galaxy tool, which means the one's who created the xml file.
+
+ * For a person it's appreciated to add the family name, given name and an url (optionnal the email). Concerning the url, consider putting the creator ORCID or if not possible the git account url.
+ * For an organization, add its name and possibly a url returning to the website of said organization.
+
 
 Parameter name, argument and help
 ---------------------------------
