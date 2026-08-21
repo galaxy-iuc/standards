@@ -399,6 +399,7 @@ Coding Style
   * `xrefs`_
   * [parallelism]
   * `requirements`_
+  * `required_files`_
   * [code]
   * `stdio`_
   * `version_command`_
@@ -411,6 +412,7 @@ Coding Style
   * `tests`_
   * `help`_
   * `citations`_
+  * `creator`_
 
 * Cheetah code should also be indented and mainly `PEP8`_ conformant
 * XML elements should normally have all attributes on a single line for easier
