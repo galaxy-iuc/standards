@@ -126,17 +126,10 @@ download date in ``name`` must not cause a duplicate row to be appended.
 Testing
 -------
 
-Data Manager tests should verify identifier stability explicitly:
-
-- Generate the output JSON for the same fixture under two different wall-clock
-  dates.
-- Assert that ``value``, ``dbkey``, and the identity-bearing ``path`` are
-  unchanged.
-- Permit the human-readable ``name`` or other provenance metadata to differ.
-- Assert that changing the upstream release, commit, manifest, or content digest
-  changes the identifier.
-- Exercise repeated installation and confirm that duplicate selector entries
-  are not created.
+Data Manager tests should use stable expected values for ``value``, ``dbkey``,
+and identity-bearing paths. Avoid expected values derived from the date on which
+the test runs. Installation dates may still appear in assertions about the
+human-readable ``name`` when relevant.
 
 Updating existing Data Managers
 -------------------------------
