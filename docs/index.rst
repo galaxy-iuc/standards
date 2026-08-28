@@ -53,6 +53,13 @@ Reference guides for the pieces that make up a tool and its repository.
 
         Declaring dependencies with Conda, Bioconda, and containers.
 
+    .. grid-item-card:: Data Managers
+        :link: best_practices/data_managers
+        :link-type: doc
+
+        Stable data-table identifiers, reproducible downloads, paths, testing,
+        and migrations.
+
     .. grid-item-card:: Repository Layout
         :link: best_practices/repositories
         :link-type: doc

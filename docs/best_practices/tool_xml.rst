@@ -384,7 +384,9 @@ For now, the recommended practice is to push new datatypes to the
 Data Managers
 -------------
 
-TODO
+Data Managers have additional requirements for portable data-table identifiers,
+reproducible downloads, and migrations. See
+:doc:`Data Manager Best Practices <data_managers>`.
 
 Coding Style
 ------------

@@ -46,6 +46,13 @@ Tools and Tool Development
     best_practices/tool_xml
     best_practices/integration_checklist
 
+Data Managers
+-------------
+
+.. toctree::
+
+    best_practices/data_managers
+
 Licensing and Use Restrictions
 ------------------------------
 
