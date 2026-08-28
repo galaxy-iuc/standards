@@ -2,9 +2,8 @@ Data Managers
 =============
 
 Data Managers install reference data and populate Galaxy tool data tables.
-Because workflows serialize selected table values, the identifiers emitted by a
-Data Manager form part of the interface between tools, workflows, and Galaxy
-instances.
+The identifiers emitted by a Data Manager form part of the interface between tools,
+workflows, and Galaxy instances.
 
 Stable data-table identifiers
 -----------------------------
@@ -91,13 +90,13 @@ identifier.
 Display names and provenance
 ----------------------------
 
-The ``name`` field should be descriptive enough for an administrator or user to
+The ``name`` field should be descriptive enough for both administrators and users to
 understand which data is installed. It may include:
 
 - the upstream project and database name;
 - the release, tag, or snapshot version;
 - relevant build parameters;
-- the local download date.
+- the local download date (but only if the other metadata are not enough).
 
 Installation metadata must not be copied into ``value`` or ``dbkey`` merely to
 make the display name unique.
