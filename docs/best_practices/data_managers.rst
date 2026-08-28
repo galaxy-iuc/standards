@@ -2,24 +2,15 @@ Data Managers
 =============
 
 Data Managers install reference data and populate Galaxy tool data tables.
-The identifiers emitted by a Data Manager form part of the interface between tools,
-workflows, and Galaxy instances.
-
-Stable data-table identifiers
------------------------------
-
-Installing the same source data on different Galaxy instances or on different
-days must produce the same machine-readable identity.
-
 A Data Manager table row commonly contains the following fields:
 
 ``value``
     The stable identifier selected by tools and serialized into workflows. It
-    must identify the data, not the local installation event.
+    should identify the data, not the local installation event.
 
 ``dbkey``
-    The genome or build identifier, when applicable. It must describe the
-    biological build and must not contain an installation timestamp.
+    The genome or build identifier, when applicable. It should describe the
+    biological build and should not contain an installation timestamp.
 
 ``name``
     A human-readable display label. Download dates and other installation
@@ -28,6 +19,14 @@ A Data Manager table row commonly contains the following fields:
 ``path``
     The installed data location. It should be stable or derived from the same
     immutable data identity as ``value``.
+
+Stable data-table identifiers
+-----------------------------
+
+The identifiers emitted by a Data Manager form part of the interface between
+tools, workflows, and Galaxy instances. Installing the same source data on
+different Galaxy instances or on different days should produce the same
+machine-readable identity.
 
 Do not use ``date.today()``, ``datetime.now()``, ``utcnow()``, or equivalent
 wall-clock values to construct ``value``, ``dbkey``, or an identity-bearing
@@ -90,15 +89,15 @@ identifier.
 Display names and provenance
 ----------------------------
 
-The ``name`` field should be descriptive enough for both administrators and users to
-understand which data is installed. It may include:
+The ``name`` field should be descriptive enough for both administrators and
+users to understand which data is installed. It may include:
 
 - the upstream project and database name;
 - the release, tag, or snapshot version;
 - relevant build parameters;
 - the local download date (but only if the other metadata are not enough).
 
-Installation metadata must not be copied into ``value`` or ``dbkey`` merely to
+Installation metadata should not be copied into ``value`` or ``dbkey`` merely to
 make the display name unique.
 
 Paths
@@ -111,16 +110,6 @@ for every execution of the same Data Manager.
 Do not overwrite different content under an existing identity. If the resolved
 upstream version or content digest has changed, generate a new identifier and
 path.
-
-Idempotency
------------
-
-Running a Data Manager repeatedly for the same immutable data should not create
-multiple selector rows with the same ``value``.
-
-If that identity is already installed, the Data Manager should either leave the
-existing row unchanged or use keyed replacement semantics. In particular, a new
-download date in ``name`` must not cause a duplicate row to be appended.
 
 Testing
 -------
