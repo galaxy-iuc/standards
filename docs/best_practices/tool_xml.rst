@@ -192,7 +192,7 @@ Please, add the files that the Galaxy tool needs to run properly such as:
 No need to add the macros as they are alredy referenced beforehand. You'll need to referenced the path of those scripts in a include tag and the `path` argument.
 
 Creator
-^^^^^^^^
+^^^^^^^
 
 A creator should include the person (or people) and/or the organization(s) that wrote down the Galaxy tool, which means the one's who created the xml file.
  * For a person it's appreciated to add the family name, given name and an url (optional the email). Concerning the url, consider putting the creator ORCID or if not possible the git account url.
