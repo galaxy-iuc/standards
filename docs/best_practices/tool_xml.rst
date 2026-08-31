@@ -154,9 +154,9 @@ If a bio.tools entry does not exist, you should add an entry as follows:
     to the entry (see below).
 
 Tool annotations
------------------------
+----------------
 EDAM
-^^^^^
+^^^^
 
 The bio.tools registry makes use of the `EDAM`_ ontology
 to annotate tools with ``Data``, ``Format``, ``Operation`` and ``Topic`` terms.
