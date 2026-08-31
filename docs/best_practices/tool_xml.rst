@@ -185,7 +185,7 @@ and the `EDAM ontology users guide <https://edamontologydocs.readthedocs.io/en/l
 Required files
 ^^^^^^^^^^^^^^
 
-Please, add the files that the Galaxy tool needs to run properly such as: 
+The <required_files> element should contain a list of all the files that are distributed together with the tool wrapper and are referenced inside the <command>, such as:
 - Scripts (e.g. .py, .r, .sh) 
 - Config files
 
