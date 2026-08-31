@@ -183,7 +183,7 @@ More detailed guidelines to pick EDAM terms are also available in the
 and the `EDAM ontology users guide <https://edamontologydocs.readthedocs.io/en/latest/users_guide.html#picking-concepts>`__.
 
 Required files
-^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^
 
 Please, add the files that the Galaxy tool needs to run properly such as: 
  * Running scripts (.py, .r, .sh ...) 
