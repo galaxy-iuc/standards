@@ -186,7 +186,7 @@ Required files
 ^^^^^^^^^^^^^^
 
 Please, add the files that the Galaxy tool needs to run properly such as: 
- * Running scripts (.py, .r, .sh ...) 
+- Scripts (e.g. .py, .r, .sh) 
  * Config files (.xml, .sh, ...)
 
 No need to add the macros as they are alredy referenced beforehand. You'll need to referenced the path of those scripts in a include tag and the `path` argument.
