@@ -196,7 +196,7 @@ Creator
 
 A `<creator>` element should include the people and/or organizations that developed the Galaxy tool wrapper.
 - For a person, specify the family name, given name and an identifier (e.g. their ORCID) or url (e.g. their GitHub account). Only include an email with the explicit consent of the person.
- * For an organization, add its name and possibly a url returning to the website of said organization.
+- For an organization, specify its name and possibly the url of its website.
 
 
 Parameter name, argument and help
