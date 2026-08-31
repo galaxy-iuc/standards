@@ -189,7 +189,8 @@ Please, add the files that the Galaxy tool needs to run properly such as:
 - Scripts (e.g. .py, .r, .sh) 
 - Config files
 
-No need to add the macros as they are alredy referenced beforehand. You'll need to referenced the path of those scripts in a include tag and the `path` argument.
+No need to add the macros as these are resolved beforehand.
+For each required file, add an `<include>` element with a `path` attribute specifying its path relative to the XML wrapper.
 
 Creator
 ^^^^^^^
