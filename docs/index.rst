@@ -9,6 +9,29 @@ community, both for contributing back to the
 `IUC repository <https://github.com/galaxyproject/tools-iuc/>`__ and for use in
 their own tool repositories.
 
+Why you might read this
+-----------------------
+
+If you need to maintain existing tools or develop new tools for Galaxy, this
+community-authored guide describes current best practices for building and
+maintaining automatically installable, reproducible Galaxy tools.
+
+Definitions
+-----------
+
+The key components involved in Galaxy tool development are:
+
+- `Tool Shed <https://galaxyproject.org/toolshed/>`__: the Galaxy application
+  repository. Tool Shed repositories support automated installation of tools
+  and their associated components through the Galaxy administration interface.
+- Galaxy tool: an XML-defined interface and associated documentation that
+  exposes a command-line application as a form-driven Galaxy tool. Tools should
+  ideally be shared in a Tool Shed repository with revision-specific dependency
+  requirements for reproducible analyses.
+- Data Manager: a tool that automates local maintenance of canonical reference
+  data, such as reference genomes and application-specific indexes. Data Manager
+  repository names should start with ``data_manager_``.
+
 Checklists
 ----------
 
@@ -53,6 +76,20 @@ Reference guides for the pieces that make up a tool and its repository.
 
         Declaring dependencies with Conda, Bioconda, and containers.
 
+    .. grid-item-card:: Data Managers
+        :link: best_practices/data_managers
+        :link-type: doc
+
+        Stable data-table identifiers, reproducible downloads, paths, testing,
+        and migrations.
+
+    .. grid-item-card:: Licensing and Use Restrictions
+        :link: best_practices/licensing
+        :link-type: doc
+
+        Licensing requirements, redistribution, declarations, and restricted
+        dependencies.
+
     .. grid-item-card:: Repository Layout
         :link: best_practices/repositories
         :link-type: doc
@@ -76,7 +113,16 @@ Reference guides for the pieces that make up a tool and its repository.
    :caption: Best Practices
    :hidden:
 
-   best_practices
+   best_practices/integration_checklist
+   best_practices/security
+   best_practices/pulsar
+   best_practices/tool_xml
+   best_practices/package_xml
+   best_practices/data_managers
+   best_practices/licensing
+   best_practices/repositories
+   best_practices/shed_yml
+   best_practices/management
 
 Galaxy Ecosystem
 ----------------
