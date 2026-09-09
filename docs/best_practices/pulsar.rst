@@ -79,6 +79,11 @@ library must be declared:
         <include path="utils.r" />
     </required_files>
 
+See :doc:`Corpus Research: required_files Mechanism (AI Generated) <pulsar/required-files-mechanism>`
+for how the feature works inside Galaxy and Pulsar, and
+:doc:`Corpus Research: required_files Usage in IUC (AI Generated) <pulsar/required-files-in-iuc>`
+for a survey of how IUC tools use it in practice.
+
 .. _pulsar-required-files-correct:
 
 **Getting the declaration right.** Most real-world failures are not a missing
@@ -111,6 +116,9 @@ is invoked directly:
     cp '$__tool_directory__/scripts/safety.py' ./safety.py &&
     cp '$__tool_directory__/scripts/table_compute.py' ./table_compute.py &&
     python ./table_compute.py
+
+See :doc:`Corpus Research: required_files Usage in IUC (AI Generated) <pulsar/required-files-in-iuc>`
+for concrete exemplars and anti-patterns.
 
 .. _pulsar-no-fs-io:
 
@@ -169,6 +177,9 @@ at template time (`prinseq
     ## enumerate outputs on the node — never os.listdir() on the head node
     for f in tmp/*.fastq; do gzip -c "$f" > tmp_file && mv tmp_file "$f"; done
 
+See the "Cheetah filesystem I/O" category in
+:doc:`Corpus Research: Pulsar Compatibility Issues (AI Generated) <pulsar/compatibility-issues>`.
+
 .. _pulsar-data-tables:
 
 3. Do not reach into ``$__app__`` at template time
@@ -198,6 +209,9 @@ handling instead:
 and reference ``$reference.fields.path`` directly on the command line — do not
 ``str()``-materialize it into an intermediate ``#set``.
 
+See the "tool-data table" category in
+:doc:`Corpus Research: Pulsar Compatibility Issues (AI Generated) <pulsar/compatibility-issues>`.
+
 .. _pulsar-no-abs-paths:
 
 4. No hardcoded absolute paths
@@ -226,6 +240,9 @@ Pulsar's staging guard rejects a path that resolves outside the authorized job
 directory, and the symlink is fragile even locally — it dangles as soon as the
 input dataset is purged or moved. Remote execution simply surfaces a latent bug.
 
+See the "composite / symlink" category in
+:doc:`Corpus Research: Pulsar Compatibility Issues (AI Generated) <pulsar/compatibility-issues>`.
+
 .. _pulsar-discovered-outputs:
 
 6. Keep discovered outputs inside the job working directory
@@ -236,3 +253,15 @@ The same principle as item 5, seen from the discovery angle.
 stage results back reliably **provided the files land inside the job working
 directory** (or a ``directory=`` subdirectory under it). Outputs written to an
 absolute path or outside the job tree are never staged back, by design.
+
+Further reading
+---------------
+
+These deep-dive references back the checklist above:
+
+- :doc:`Corpus Research: required_files Mechanism (AI Generated) <pulsar/required-files-mechanism>`
+  — how ``required_files`` works inside Galaxy and Pulsar.
+- :doc:`Corpus Research: required_files Usage in IUC (AI Generated) <pulsar/required-files-in-iuc>`
+  — how IUC tools use it in practice, with exemplars.
+- :doc:`Corpus Research: Pulsar Compatibility Issues (AI Generated) <pulsar/compatibility-issues>`
+  — the catalog of Pulsar problem categories seen in IUC tools.
