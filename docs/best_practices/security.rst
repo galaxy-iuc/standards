@@ -70,6 +70,10 @@ does not make it safe for the inner language. The safer design is usually to
 write values to a Galaxy ``<configfile>`` and have the program consume them as
 data.
 
+See :doc:`Corpus Research: Command Construction and Injection (AI Generated)
+<security/command-construction-and-injection>` for representative IUC reviews
+and nested-command cases.
+
 .. _security-free-text:
 
 2. Constrain free text to the smallest useful language
@@ -167,6 +171,10 @@ different identifiers to collapse to the same filename; add a stable unique
 suffix or fail on collisions when multiple collection elements are handled
 together.
 
+See :doc:`Corpus Research: Identifiers, Filenames, and Sanitization (AI
+Generated) <security/identifiers-filenames-and-sanitization>` for patterns
+drawn from collection-aware tools.
+
 .. _security-sanitizer-semantics:
 
 4. Preserve sanitization through Cheetah expressions
@@ -195,6 +203,10 @@ Do not reduce this rule to "add ``str`` everywhere": the desired result is
 that the value is sanitized exactly once for the context where it is consumed.
 Values written to JSON or another data-only config may legitimately preserve
 characters that would be unsafe in a shell fragment.
+
+See :doc:`Corpus Research: Command Construction and Injection (AI Generated)
+<security/command-construction-and-injection>` for the Cheetah object-wrapper
+case and safe config-file counterexamples.
 
 .. _security-cheetah-side-effects:
 
@@ -225,6 +237,10 @@ eventual command does not contain template-phase behavior. Galaxy's
 <https://docs.galaxyproject.org/en/latest/admin/user_defined_tools.html>`__
 describes why untrusted XML/Cheetah tools cannot be treated as ordinary
 user-authored jobs.
+
+See :doc:`Corpus Research: Command Construction and Injection (AI Generated)
+<security/command-construction-and-injection>` for the separate template and
+job execution phases.
 
 .. _security-data-not-code:
 
@@ -283,6 +299,10 @@ destination before extraction, reject absolute paths and ``..`` traversal, and
 consider links and special files. Extract only the members the tool actually
 needs.
 
+See :doc:`Corpus Research: Unsafe Serialization, Archives, and Active Content
+(AI Generated) <security/unsafe-serialization-and-active-content>` for the
+RData, PyTorch, and CVE-2007-4559 cases.
+
 .. _security-credentials:
 
 8. Keep credentials out of commands, arguments, and logs
@@ -313,7 +333,9 @@ access policy.
 
 See the Galaxy schema's
 `credential security considerations
-<https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements-credentials>`__.
+<https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-requirements-credentials>`__
+and :doc:`Corpus Research: Secrets, Downloads, and Transport (AI Generated)
+<security/secrets-downloads-and-transport>`.
 
 .. _security-downloads:
 
@@ -341,6 +363,9 @@ A checksum detects corruption or substitution relative to the expected
 artifact; it does not establish that the upstream artifact itself is benign.
 Dependency versions and containers should also remain pinned according to the
 tool dependency best practices.
+
+See :doc:`Corpus Research: Secrets, Downloads, and Transport (AI Generated)
+<security/secrets-downloads-and-transport>` for TLS and checksum review cases.
 
 .. _security-active-content:
 
@@ -370,3 +395,26 @@ See Galaxy's
 and
 `XSS-vulnerable MIME-type option
 <https://docs.galaxyproject.org/en/latest/admin/galaxy_options.html#serve-xss-vulnerable-mimetypes>`__.
+
+See :doc:`Corpus Research: Unsafe Serialization, Archives, and Active Content
+(AI Generated) <security/unsafe-serialization-and-active-content>` for the IUC
+review evidence.
+
+Further reading
+---------------
+
+The checklist above is normative guidance. These dated, AI-generated research
+notes preserve the supporting evidence:
+
+- :doc:`Corpus Research: Command Construction and Injection (AI Generated)
+  <security/command-construction-and-injection>`
+  — shell interpolation, nested commands, Cheetah semantics, and safe data boundaries.
+- :doc:`Corpus Research: Identifiers, Filenames, and Sanitization (AI Generated)
+  <security/identifiers-filenames-and-sanitization>`
+  — collection identifiers, filename normalization, and collision risks.
+- :doc:`Corpus Research: Unsafe Serialization, Archives, and Active Content
+  (AI Generated) <security/unsafe-serialization-and-active-content>`
+  — pickle-like formats, model loading, archive traversal, HTML, and SVG.
+- :doc:`Corpus Research: Secrets, Downloads, and Transport (AI Generated)
+  <security/secrets-downloads-and-transport>`
+  — credential exposure, TLS, checksums, and remote-content controls.
