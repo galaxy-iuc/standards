@@ -76,6 +76,13 @@ Reference guides for the pieces that make up a tool and its repository.
 
         Declaring dependencies with Conda, Bioconda, and containers.
 
+    .. grid-item-card:: Data Tables
+        :link: best_practices/datatables
+        :link-type: doc
+
+        Column design, the required Data Manager, and publishing entries to
+        CVMFS.
+
     .. grid-item-card:: Data Managers
         :link: best_practices/data_managers
         :link-type: doc
@@ -118,6 +125,7 @@ Reference guides for the pieces that make up a tool and its repository.
    best_practices/pulsar
    best_practices/tool_xml
    best_practices/package_xml
+   best_practices/datatables
    best_practices/data_managers
    best_practices/licensing
    best_practices/repositories
