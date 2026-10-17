@@ -19,12 +19,14 @@ users select a meaningful value automatically.
 A Data Manager is required
 --------------------------
 
-Every new data table must be accompanied by a Data Manager that populates it.
+It is strongly recommended to accompany every new data table be by a Data Manager that populates it.
 Without a Data Manager, the table would have to be filled in manually by the
 administrators of the Galaxy instances that install the tool. That workload
 cannot be offloaded to administrators: providing the data also means keeping
 it up to date, so the process should be simplified as much as possible
 instead of introducing manual work.
+`A tutorial on data manager is available at GTN
+<https://training.galaxyproject.org/training-material/topics/dev/tutorials/data-manager-architecture/tutorial.html>`__.
 
 Publishing entries to CVMFS
 ---------------------------
