@@ -2,9 +2,20 @@ Data Tables
 ===========
 
 Galaxy data tables let tools present a menu of reference data (for example,
-genomes or indexes) to users. Follow the rules below when adding a new data
-table. The reference data is stored centrally, which saves space and time
-for users.
+genomes or indexes) to users. 
+
+What is a Data Table?
+---------------------
+
+A data table is a small, centrally managed table of metadata describing
+reference datasets stored on a Galaxy server, such as genome indexes or
+BLAST databases. Each row describes one entry with columns such as
+``name``, ``value``, and ``path``, and tools expose those entries to users
+as a selection menu. A data table is identified by a name and all tool
+(versions) using this data table share the same information (but it can
+be filtered tool / version specific). Because the underlying files are shared across all
+users of a server, a data table saves disk space and lets users pick
+ready-made data instead of uploading it themselves.
 
 Design the columns for a Data Manager
 -------------------------------------
