@@ -30,7 +30,7 @@ users select a meaningful value automatically.
 A Data Manager is required
 --------------------------
 
-It is strongly recommended to accompany every new data table be by a Data Manager that populates it.
+It is strongly recommended to accompany every new data table by a Data Manager that populates it.
 Without a Data Manager, the table would have to be filled in manually by the
 administrators of the Galaxy instances that install the tool. That workload
 cannot be offloaded to administrators: providing the data also means keeping
