@@ -418,7 +418,8 @@ Two things to know when writing Markdown help:
 - ``planemo lint`` checks Markdown help correctly only with galaxy-tool-util
   26.1 or later. Older versions check every help section as reStructuredText,
   so valid Markdown can fail with ``HelpInvalidRST``; a pipe table is the usual
-  case. Until the linter you use is new enough, write tables as lists.
+  case. If you see that, update planemo and galaxy-tool-util
+  (``pip install -U planemo galaxy-tool-util``) rather than rewriting the help.
 
 Inside the help tag you should describe the functionality of your tool.
 The help tag is to the ``help=""`` attribute as a man page is to the ``--help``
