@@ -26,7 +26,7 @@ attribute of the XML tool element, e.g.
     <tool id="rgTF" name="Tool Factory" version="1.11">
 
 and should be incremented with each change of the wrapper that is
-released to the Tool Shed (except for cosmetic modifications).
+released to the Tool Shed.
 
 The value should follow the
 `PEP 440 <https://www.python.org/dev/peps/pep-0440/>`__ specification.
