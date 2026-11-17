@@ -375,21 +375,22 @@ messages are detected in the same way.
 Use ``detect_errors="exit_code"`` instead when the phrase check would fail
 jobs that succeeded. The common cases are tools that print ``error:`` or
 ``exception:`` to standard output or standard error during normal operation,
-and tools whose purpose is to report errors found in their input. Say why in a comment above
-the ``<command>`` tag, and make sure the tool really does return a non-zero
-exit code when it fails. Checking only the exit code is also what Galaxy does
-when ``detect_errors`` is not set and the tool has a profile of 16.04 or later,
-so set the attribute explicitly either way.
+and tools whose purpose is to report errors found in their input. Explain the choice in a comment
+above the ``<command>`` tag, and check that the tool returns a non-zero exit
+code when it fails. This is also the default from profile 16.04, but set the
+attribute explicitly.
 
 
 Help tag
 --------
 
 Tool help can be written in Markdown or in reStructuredText. Markdown is
-preferred for new tools. It requires ``format="markdown"`` on the help tag, and
-a Galaxy server of release 24.2 or later to display it. The tool profile does
-not switch Markdown help on, but a profile of 24.2 or later means that only
-servers able to display the help will load the tool.
+preferred for new tools. Set the format explicitly on the help tag in either
+case, ``format="markdown"`` or ``format="restructuredtext"``; without the
+attribute the help is read as reStructuredText. Galaxy displays Markdown help
+from release 24.2. The
+`Galaxy schema docs <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-help>`__
+describe the help tag in detail.
 
 The help tag should be started and finished by a CDATA tag.
 
@@ -399,27 +400,10 @@ The help tag should be started and finished by a CDATA tag.
 
 `http://en.wikipedia.org/wiki/CDATA <http://en.wikipedia.org/wiki/CDATA>`__
 
-Without the ``format`` attribute the help is read as reStructuredText:
-
-.. code:: xml
-
-    <help><![CDATA[ your lines of reStructuredText here ]]></help>
-
 reStructuredText help remains valid, and existing tools do not need to be
 converted. When you do convert a tool, convert the whole help section; do not
 mix the two syntaxes. Tools that include images in their help should stay with
 reStructuredText for now (see `Including Images`_).
-
-Two things to know when writing Markdown help:
-
-- Start the help text in the first column. Galaxy does not remove the
-  indentation that lines the text up with the surrounding XML, and Markdown
-  renders text indented by four or more spaces as a code block.
-- ``planemo lint`` checks Markdown help correctly only with galaxy-tool-util
-  26.1 or later. Older versions check every help section as reStructuredText,
-  so valid Markdown can fail with ``HelpInvalidRST``; a pipe table is the usual
-  case. If you see that, update planemo and galaxy-tool-util
-  (``pip install -U planemo galaxy-tool-util``) rather than rewriting the help.
 
 Inside the help tag you should describe the functionality of your tool.
 The help tag is to the ``help=""`` attribute as a man page is to the ``--help``
