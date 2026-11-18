@@ -23,6 +23,10 @@ If the Galaxy tool is a wrapper for an underlying tool, pin the version with a
 ``@TOOL_VERSION@`` macro token and reuse it in the ``<requirement>`` as
 described in :doc:`tool_xml`.
 
+When a repository contains several tools, prefer one set of requirements shared
+by all of them, defined once in the macro file. The whole suite then runs in one
+environment and needs one container.
+
 If a package does not yet exist
 -------------------------------
 

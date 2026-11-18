@@ -103,6 +103,24 @@ from the latest stable release, unless a new Galaxy feature is required for
 the tool to run successfully. A list of profile changes is maintained in the
 `Galaxy schema docs <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-profile>`__.
 
+A newer profile is usually the better choice, since newer profiles turn on
+stricter and safer defaults. The limit is what servers can load: Galaxy refuses
+to load a tool whose profile is newer than the server, so do not raise the
+profile beyond what the major public servers run unless the tool needs the
+newer behavior. For raising the profile of an existing tool, see the
+`tool update guide <https://github.com/galaxyproject/tools-iuc/blob/main/docs/guide_for_tool_updates.md>`__.
+
+In a suite, define the profile once as a `token <https://planemo.readthedocs.io/en/latest/writing_advanced.html#macro-tokens>`__ in the shared macro file and
+use it in every tool, so the whole suite moves together:
+
+.. code:: xml
+
+    <token name="@PROFILE@">25.1</token>
+
+.. code:: xml
+
+    <tool id="..." name="..." version="@TOOL_VERSION@+galaxy@VERSION_SUFFIX@" profile="@PROFILE@">
+
 Tool Descriptions
 -----------------
 
@@ -323,6 +341,10 @@ escaping (``&amp;``).
 All Cheetah variables for text parameters, input and output files must be
 single-quoted, e.g. ``'${var_name}'``.
 
+Shell variables are written differently. Escape the dollar sign so that Cheetah
+leaves the variable alone, and put it in double quotes, e.g.
+``--threads "\${GALAXY_SLOTS:-1}"``.
+
 For composite datatypes the recommended attribute to access the associated
 directory name differs for inputs (e.g. ``$input.extra_files_path``) versus
 outputs (e.g. ``$output.files_path``). This difference is historical, and
@@ -347,19 +369,42 @@ so:
     </command>
 
 This will automatically fail the tool if the exit code is non-zero, or if the
-phrases ``error:`` or ``exception:`` appear in STDERR.
+phrases ``error:`` or ``exception:`` appear in the tool's standard output or
+standard error. The match is not case sensitive. A few common out-of-memory
+messages are detected in the same way.
+
+Use ``detect_errors="exit_code"`` instead when the phrase check would fail
+jobs that succeeded. The common cases are tools that print ``error:`` or
+``exception:`` to standard output or standard error during normal operation,
+and tools whose purpose is to report errors found in their input. Explain the choice in a comment
+above the ``<command>`` tag, and check that the tool returns a non-zero exit
+code when it fails. This is also the default from profile 16.04, but set the
+attribute explicitly.
 
 
 Help tag
 --------
 
+Tool help can be written in Markdown or in reStructuredText. Markdown is
+preferred for new tools. Set the format explicitly on the help tag in either
+case, ``format="markdown"`` or ``format="restructuredtext"``; without the
+attribute the help is read as reStructuredText. Galaxy displays Markdown help
+from release 24.2. The
+`Galaxy schema docs <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-help>`__
+describe the help tag in detail.
+
 The help tag should be started and finished by a CDATA tag.
 
 .. code:: xml
 
-    <![CDATA[ your lines of restructuredText here ]]>
+    <help format="markdown"><![CDATA[ your lines of Markdown here ]]></help>
 
 `http://en.wikipedia.org/wiki/CDATA <http://en.wikipedia.org/wiki/CDATA>`__
+
+reStructuredText help remains valid, and existing tools do not need to be
+converted. When you do convert a tool, convert the whole help section; do not
+mix the two syntaxes. Tools that include images in their help should stay with
+reStructuredText for now (see `Including Images`_).
 
 Inside the help tag you should describe the functionality of your tool.
 The help tag is to the ``help=""`` attribute as a man page is to the ``--help``
@@ -377,6 +422,10 @@ might be nice for those images to be included in the Galaxy tool documentation!
 Images should be placed in a subdirectory, ``./static/images/``, and referenced
 in your tool help as ``.. image:: my-picture.png``. This can be seen in the
 IUC's wrappers, such as the one for the bedtools `slop`_ command.
+
+This works in reStructuredText help only. Galaxy rewrites the paths of
+``.. image::`` directives so that they point at the installed tool's images,
+and it does not do this for Markdown help.
 
 Generating Indices
 ------------------
@@ -479,7 +528,7 @@ Coding Style
 .. _citations: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-citations
 .. _creator: https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-creator
 .. _bedtools: http://bedtools.readthedocs.org/en/latest/content/tools/slop.html
-.. _slop: https://github.com/galaxyproject/tools-iuc/blob/master/tools/bedtools/slopBed.xml
+.. _slop: https://github.com/galaxyproject/tools-iuc/blob/main/tools/bedtools/slopBed.xml
 .. _Galaxy repository: https://github.com/galaxyproject/galaxy
 .. _PEP8: https://www.python.org/dev/peps/pep-0008/
 .. _smarkets: https://github.com/PyCQA/flake8-import-order/blob/master/tests/test_cases/complete_smarkets.py

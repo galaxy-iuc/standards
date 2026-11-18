@@ -21,7 +21,7 @@ Creating the Tool Wrapper (XML File)
 - Review the `IUC's Best Practices for Tools <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html>`__.
 - Consult the `Galaxy Tool XML File schema <https://docs.galaxyproject.org/en/master/dev/schema.html>`__.
 - Create your tool wrapper with a command like ``planemo tool_init --id 'tool_name' --name 'Tool description'``. 
-- Alternatively, you could copy and modify `an existing IUC wrapper <https://github.com/galaxyproject/tools-iuc/tree/master/tools>`__.
+- Alternatively, you could copy and modify `an existing IUC wrapper <https://github.com/galaxyproject/tools-iuc/tree/main/tools>`__.
 - Give your tool an appropriate ``ID`` and ``name`` by consulting the `IUC's Best Practices for Tools <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html>`__. The ``ID`` is usually the same as the name of the tool XML file and directory.
 - Define a `Tool Version <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-versions>`__ for the wrapper. If it is the first wrapper, it is recommended to use the same version as the tool in the requirement.
 - Add a short tool `Description <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tool-descriptions>`__.
@@ -32,7 +32,7 @@ Creating the Tool Wrapper (XML File)
 - Supply at least one `Input <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-inputs>`__ with a description of parameters. Add `Validators <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-inputs-param-validator>`__ to user input fields.
 - Supply at least one `Output <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-outputs>`__ with a description of parameters. For Output that is optionally created, use `Filters <https://docs.galaxyproject.org/en/master/dev/schema.html#tool-outputs-data-filter>`__.
 - Supply at least one `Test <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#tests>`__. The primary output is a good choice for testing. Don't forget the use of ``sim_size`` if variable data is included.
-- Add a `Help <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#help-tag>`__ section written in `valid reStructuredText <http://rst.ninjs.org>`__ within CDATA tags.
+- Add a `Help <http://galaxy-iuc-standards.readthedocs.io/en/latest/best_practices/tool_xml.html#help-tag>`__ section within CDATA tags, written in Markdown (``format="markdown"``, preferred for new tools) or in `valid reStructuredText <https://docutils.sourceforge.io/rst.html>`__.
 - Add a `Citation <https://docs.galaxyproject.org/en/latest/dev/schema.html#tool-citations>`__ section with a citation for the tool, preferably a `DOI <https://www.doi.org/>`__.
 - If your tool uses `built-in data <https://galaxyproject.org/admin/data-integration>`__:
     - Provide the comment-only ``tool-data/data_table_name.loc.sample`` file
